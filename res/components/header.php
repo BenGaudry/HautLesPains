@@ -1,4 +1,6 @@
 <?php 
+$__path__ = 'http://localhost/HautLesPains2/';
+
 function page_title() {
 	if(isset($pageTitle)){
 		$title = $pageTitle;
@@ -9,19 +11,22 @@ function page_title() {
 	return $title;
 }
 
-function nav_item(string $lien, string $titre, string $optionalClass = null):string {
+function nav_item(string $lien, string $titre, string $optionalClass = NULL):string {
 
+  $__path__ = 'http://localhost/HautLesPains2/';
   $class = ''; // Classe par défaut du menu
-  if($_SERVER['SCRIPT_NAME'] === $lien){
+
+  $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/HautLesPains2/' . $lien;
+  $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
+
+  if($url === $l){
     $class .= ' active';
   }
 
   return <<< HTML
-  <li class="$class"><a href="$lien">$titre</a></li>
+    <li class="$class"><a href="$l">$titre</a></li>
 HTML;
 }
-
-$__path__ = 'http://localhost:8000/';
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +50,7 @@ $__path__ = 'http://localhost:8000/';
   <!-- Favicon -->
   <meta name="theme-color" content="#fff">
   <link rel="icon" href="<?= $__path__ ?>res/img/favicon/favicon.png" type="image/png">
-  <link rel="stylesheet" href="http://localhost:8000/res/styles/app.css">
+  <link rel="stylesheet" href="<?= $__path__ ?>res/styles/app.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <script src="<?= $__path__ ?>res/scripts/main.js" defer></script>
 </head>
@@ -61,10 +66,10 @@ $__path__ = 'http://localhost:8000/';
     
 
       <ul id="links">
-				<?= nav_item('/templates/index.php', 'Accueil') ?>
+				<?= nav_item('templates/index.php', 'Accueil') ?>
 				<li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
-        <?= nav_item('/templates/order.php', 'Commander') ?>
-				<?= nav_item('/templates/profile.php', 'Profil', 'btn') ?>
+        <?= nav_item('templates/order.php', 'Commander') ?>
+				<?= nav_item('templates/profile.php', 'Profil', 'btn') ?>
       </ul>
 
       <button type="button" onclick="toggleMenu()" id="menu-btn" class="menu-btn">

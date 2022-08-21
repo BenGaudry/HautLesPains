@@ -5,8 +5,8 @@
 	background-color: $accent;
 	border-radius: 100px;
 	transition: background-color 0.3s;
-    border: 2px solid $accent;
-    width: fit-content;
+  border: 2px solid $accent;
+  width: fit-content;
 
 	a{
 		transition: none;
@@ -43,7 +43,7 @@
 }
 
 .btn-transparent{
-    border: 2px solid $accent;
+    border-color: $accent;
     background-color: transparent;
     a{
         color: $accent !important;
@@ -56,6 +56,37 @@
     &:hover{
         background-color: darken($accent, 10%);
     }
+}
+
+.btn-noborder{
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+
+	a{
+		color: $secondaryTextColor !important;
+		padding: 0;
+		transition: color 0.2s;
+		
+		&::after{
+			content: "→";
+			margin-left: 10px;
+			transition: margin-left 0.2s;
+		}
+
+		&:hover{
+			color: $primaryTextColor !important;
+			&::after{
+				margin-left: 18px;
+			}
+		}
+	}
+
+	&:hover{
+		background-color: transparent;
+		border-color: transparent;
+	}
+
 }
 
 .btn-container{
@@ -71,4 +102,9 @@
 
 .bread-img{
 	width: 100%;
+}
+
+.nature-progrès-logo{
+	height: 250px;
+	margin: 0 auto;
 }

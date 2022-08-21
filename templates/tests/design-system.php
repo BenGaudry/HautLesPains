@@ -27,7 +27,15 @@
 <section class="hero hero-centered">
   <div class="content">
     <div class="side">
-      <a href="" class="btn"><p>Bouton</p></a>
+      <div class="btn-container">
+        <div class="btn">
+          <a href="">Primary CTA</a>
+        </div>
+        
+        <div class="btn btn-transparent">
+          <a href="">Secondary CTA</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
