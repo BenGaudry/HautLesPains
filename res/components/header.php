@@ -63,8 +63,8 @@ $__path__ = 'http://localhost:8000/';
       <ul id="links">
 				<?= nav_item('/templates/index.php', 'Accueil') ?>
 				<li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
-        <?= nav_item('/order.php', 'Commander') ?>
-				<?= nav_item('/profile.php', 'Profil', 'btn') ?>
+        <?= nav_item('/templates/order.php', 'Commander') ?>
+				<?= nav_item('/templates/profile.php', 'Profil', 'btn') ?>
       </ul>
 
       <button type="button" onclick="toggleMenu()" id="menu-btn" class="menu-btn">

@@ -102,3 +102,8 @@ a {
 		scroll-behavior: auto !important;
 	}
 }
+
+::selection{
+	background-color: lighten($secondaryTextColor, 5%);
+	color: #fff;
+}

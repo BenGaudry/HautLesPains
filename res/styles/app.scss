@@ -2,6 +2,8 @@
 @import './modules/var';
 @import './modules/footer';
 @import './modules/header';
+@import './modules/page';
+@import './modules/titles';
 
 main{
   max-width: $maxElementsWidth;
