@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'var';
 // Google font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@300;400&display=swap');
 
@@ -6,77 +6,99 @@
 $titleFont: 'Montserrat', sans-serif;
 $plainTextFont: 'Source Sans Pro', sans-serif;
 
-*, *::before, *::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	user-select: text;
 }
 
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd{
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
 	padding: 0;
-    font: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    text-decoration: inherit;
+	font: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	text-decoration: inherit;
 	font-family: $plainTextFont;
-    color: $primaryTextColor;
+	color: $primaryTextColor;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
 	font-family: $titleFont;
 	font-weight: 500;
 }
 
-ul, ol{
-    list-style: none;
+ul,
+ol {
+	list-style: none;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    min-width: 100vw;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    font-size: 1em;
+	min-height: 100vh;
+	min-width: 100vw;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-size: 1em;
 	background-color: $bodyBgColor;
 }
 
-img, picture {
+img,
+picture {
 	max-width: 100%;
 	display: block;
 }
 
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+	font: inherit;
 
-    &:hover{
-        cursor: pointer;
-    }
+	&:hover {
+		cursor: pointer;
+	}
 }
 
-button{
+button {
 	font-weight: 400;
 	font-family: $plainTextFont;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within {
-	 scroll-behavior: auto;
+		scroll-behavior: auto;
 	}
-	
-	*, *::before, *::after {
-	  animation-duration: 0.01ms !important;
-	  animation-iteration-count: 1 !important;
-	  transition-duration: 0.01ms !important;
-	  scroll-behavior: auto !important;
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }

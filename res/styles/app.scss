@@ -1,2 +1,11 @@
 @import './modules/reset';
-@import './modules/colors';
+@import './modules/var';
+@import './modules/footer';
+@import './modules/header';
+
+main{
+  max-width: $maxElementsWidth;
+  margin: 0 auto;
+  padding: $defaultPadding;
+}
+

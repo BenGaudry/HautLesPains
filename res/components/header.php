@@ -17,9 +17,11 @@ function nav_item(string $lien, string $titre, string $optionalClass = null):str
   }
 
   return <<< HTML
-  <li><a class="$class" href="$lien">$titre</a></li>
+  <li class="$class"><a href="$lien">$titre</a></li>
 HTML;
 }
+
+$__path__ = 'http://localhost:8000/';
 ?>
 
 <!DOCTYPE html>
@@ -37,14 +39,15 @@ HTML;
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?php print(page_title()) ?>">
   <meta property="og:description" content="Le site web Haut Les Pains permet de commander, de consulter les points de livraison et les dates de fournée de Lison Loup au fournil de Longessaigne.">
-  <meta property="og:image" content="#">
+  <meta property="og:image" content="res/img/favicon/favicon.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <!-- Favicon -->
   <meta name="theme-color" content="#fff">
-  <link rel="stylesheet" href="res/styles/app.css">
+  <link rel="icon" href="<?= $__path__ ?>res/img/favicon/favicon.png" type="image/png">
+  <link rel="stylesheet" href="http://localhost:8000/res/styles/app.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-  <script src="res/scripts/main.js" defer></script>
+  <script src="<?= $__path__ ?>res/scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -52,20 +55,19 @@ HTML;
 <header class="menu-bar">
     <nav>
       <div class="menu-bar-assets">
-        <img src="images/icon.png" alt="Icone du site">
+        <img src="<?= $__path__ ?>res/img/favicon/favicon.png" alt="Icone du site">
         <h1>Haut les pains</h1>
       </div>
     
 
       <ul id="links">
-				<?= nav_item('/index.php', 'Accueil') ?>
+				<?= nav_item('/templates/index.php', 'Accueil') ?>
 				<li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
         <?= nav_item('/order.php', 'Commander') ?>
 				<?= nav_item('/profile.php', 'Profil', 'btn') ?>
       </ul>
 
-      <button type="button" onclick="toggleMenu()" id="menu-btn">
-        <div></div>
+      <button type="button" onclick="toggleMenu()" id="menu-btn" class="menu-btn">
         <div></div>
         <div></div>
       </button>

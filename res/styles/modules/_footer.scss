@@ -1,0 +1,64 @@
+@import 'var';
+
+.page-footer {
+  padding: $defaultPadding;
+  max-width: $maxElementsWidth;
+  margin: 0 auto;
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+    ul {
+      &:not(:last-child) {
+        margin-right: 70px;
+      }
+
+      li {
+        a {
+          color: $secondaryTextColor;
+          font-size: 0.9em;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .footer-section-title {
+        color: #000;
+        font-size: 1em;
+      }
+    }
+
+    .call-to-action {
+      input {
+        background-color: darken($bodyBgColor, 5%);
+        border: 2px solid darken($bodyBgColor, 5%);
+        padding: 10px 20px;
+      }
+
+      button {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 10px 20px;
+        border: 2px solid #000;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #fff;
+          border: 2px solid #000;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: #6c6c6c;
+    text-align: center;
+  }
+}

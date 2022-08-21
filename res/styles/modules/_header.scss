@@ -1,0 +1,127 @@
+@import 'var';
+
+.menu-bar {
+  width: 100%;
+  background-color: $bodyBgColor;
+  box-shadow: 0px 5px 10px rgba(211, 211, 211, 0.25);
+  height: $topBarHeight;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    padding: 10px $defaultPadding;
+    max-width: 1200px;
+    margin: auto;
+
+    #menu-btn {
+      display: none;
+    }
+
+    .menu-bar-assets {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        height: 60px;
+        margin-right: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        display: block;
+        color: #CCC;
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: lighten($secondaryTextColor, 10%);
+          transform-origin: bottom right;
+          transition: transform 0.4s ease-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: $secondaryTextColor;
+          transition: color ease-out 0.2s;
+          font-family: 'Source sans pro', sans-serif;
+        }
+
+      }
+
+      .active{
+        a{
+          color: $primaryTextColor !important;
+        }
+
+        &::after {
+          background-color: $primaryTextColor;
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .menu-btn{
+    height: 30px;
+    display: block !important;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+
+    div{
+      background-color: $primaryTextColor;
+      width: 24px;
+      height: 1px;
+      transition: transform 0.2s;
+      margin: 7.5px 0;
+    }
+  }
+
+  .menu-btn-active{
+    div:first-child{
+      transform: rotate(45deg);
+    }
+
+    div:last-child{
+      transform: rotate(-45deg);
+    }
+  }
+
+  #links{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    top: $topBarHeight; 
+  }
+}
