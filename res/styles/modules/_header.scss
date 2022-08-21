@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 1112;
+  overflow: hidden;
 
   nav {
     display: flex;
@@ -16,7 +17,7 @@
     top: 0;
     position: sticky;
     padding: 10px $defaultPadding;
-    max-width: 1200px;
+    max-width: calc($maxElementsWidth - (10 * $defaultPadding));
     margin: auto;
 
     #menu-btn {

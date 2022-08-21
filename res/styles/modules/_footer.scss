@@ -18,8 +18,10 @@
 
       li {
         a {
-          color: $secondaryTextColor;
-          font-size: 0.9em;
+          p{
+            color: $secondaryTextColor;
+            font-size: 1em;
+          }
 
           &:hover {
             text-decoration: underline;

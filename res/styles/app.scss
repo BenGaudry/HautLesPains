@@ -3,11 +3,6 @@
 @import './modules/footer';
 @import './modules/header';
 @import './modules/page';
-@import './modules/titles';
-
-main{
-  max-width: $maxElementsWidth;
-  margin: 0 auto;
-  padding: $defaultPadding;
-}
-
+@import './modules/text';
+@import './modules/components';
+@import './modules/animations';

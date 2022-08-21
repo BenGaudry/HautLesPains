@@ -56,7 +56,7 @@ $__path__ = 'http://localhost:8000/';
     <nav>
       <div class="menu-bar-assets">
         <img src="<?= $__path__ ?>res/img/favicon/favicon.png" alt="Icone du site">
-        <h1>Haut les pains</h1>
+        <h3>Haut les pains</h3>
       </div>
     
 

@@ -3,18 +3,19 @@
 <footer class="page-footer">
     <div class="footer-links">
         <ul>
-            <li class="footer-section-title">Site web</li>
-            <li><a href="https://github.com/BenGaudry/HautLesPains" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Suggérer des améliorations</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Nous contacter</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+            <li class="footer-section-title"><h5>Site web</h5></li>
+            <li><a href="https://github.com/BenGaudry/HautLesPains" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a></li>
+            <li><a href="#"><p>Suggérer des améliorations</p></a></li>
+            <li><a href="#"><p>Nous contacter</p></a></li>
+            <li><a href="#"><p>FAQ</p></a></li>
         </ul>
         <ul>
-            <li class="footer-section-title">Plus</li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Mentions légales</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Conditions d'utilisation</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">CGV</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Plan du site</a></li>
+            <li class="footer-section-title"><h5>Plus</h5></li>
+            <li><a href="#"><p>Mentions légales</p></a></li>
+            <li><a href="#"><p>Conditions d'utilisation</p></a></li>
+            <li><a href="#"><p>CGV</p></a></li>
+            <li><a href="#"><p>Plan du site</p></a></li>
+            <li><a href="<?= $__path__ ?>templates/tests/design-system.php"><p>Design System</p></a></li>
         </ul>
         <form class="call-to-action">
             <input type="text" placeholder="Inscrivez-vous à la newsletter">

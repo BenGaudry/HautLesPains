@@ -1,0 +1,74 @@
+@import 'var';
+
+.btn{
+	color: $bodyBgColor;
+	background-color: $accent;
+	border-radius: 100px;
+	transition: background-color 0.3s;
+    border: 2px solid $accent;
+    width: fit-content;
+
+	a{
+		transition: none;
+		color: $bodyBgColor !important;
+		font-size: 1.1em;
+		font-weight: 500 !important;
+		padding: 10px 30px;
+		width: 100% !important;
+		height: 100% !important;
+		display: block;
+		
+		// &::after{
+		// 	content: "→";
+		// 	font-size: 0em;
+		// 	margin-left: 0;
+		// 	height: 0;
+		// 	transition: all 0.3s;
+		// }
+
+		// &:hover::after{
+		// 	font-size: 1em;
+		// 	margin-left: 5px;
+		// }
+	}
+
+	&::after{
+		display: none;
+	}
+
+	&:hover{
+		background-color: darken($accent, 10%);
+        border-color: darken($accent, 10%);
+	}
+}
+
+.btn-transparent{
+    border: 2px solid $accent;
+    background-color: transparent;
+    a{
+        color: $accent !important;
+
+        &:hover{
+            color: $bodyBgColor !important;
+        }
+    }
+
+    &:hover{
+        background-color: darken($accent, 10%);
+    }
+}
+
+.btn-container{
+	display: flex;
+	flex-direction: row;
+	gap: calc($defaultPadding / 2);
+}
+
+#map{
+	height: 400px !important;
+	width: calc(100% - 50px) !important;
+}
+
+.bread-img{
+	width: 100%;
+}

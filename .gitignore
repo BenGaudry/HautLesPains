@@ -1,6 +1,8 @@
 /node_modules/
+config/db/
 
 *.sql
+*.sqlite
 
 res/styles/app.css
 res/styles/app.css.map
@@ -11,3 +13,4 @@ yarn-error.log
 *.log
 *.lock
 *.tmp
+*.exe

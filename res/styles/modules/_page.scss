@@ -1,6 +1,88 @@
-@import 'colors';
+@import 'var';
 
 .hero{
   display: flex;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
+
+  .content{
+    display: flex;
+    align-items: center;
+    gap: calc($defaultPadding * 2);
+    width: 100%;
+    max-width: calc($maxElementsWidth - (2 * $defaultPadding));
+    margin: 0 auto;
+    padding: $defaultPadding;
+
+    .hero-text-content p:not(:first-child){
+      margin-top: calc($defaultPadding / 8);
+    }
+
+    .hero-text-content:not(:last-child){
+      margin-bottom: $defaultPadding;
+    }
+  }
+}
+
+.hero-splitted{
+  gap: calc(2* $defaultPadding);
+  .content{
+    flex-direction: row;
+  }
+}
+
+.hero-colored{
+  background-color: $accent;
+  
+  h1, h2, h3, h4, h5, h6, p, a{
+    color: #fff;
+  }
+}
+
+.hero-no-padding{
+  .content{
+    padding: 0;
+    gap: 0;
+
+    .less-important-side{
+      padding: $defaultPadding;
+    }
+  }
+}
+
+.side{
+  flex: 10;
+}
+
+.less-important-side{
+  flex: 6 !important;
+}
+
+.hero-centered{
+  .content{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and(max-width: 768px){
+  .hero{
+    flex-direction: column;
+    .content{
+      flex-direction: column;
+    }
+  }
+
+  .no-mobile{
+    display: none;
+  }
+
+  .side{
+    height: max-content;
+  }
+
+  #map{
+    height: 400px;
+  }
 }

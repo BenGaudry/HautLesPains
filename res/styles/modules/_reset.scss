@@ -1,6 +1,6 @@
 @import 'var';
 // Google font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap&family=Amatic+SC:wght@400;700&display=swap');
 
 //fonts
 $titleFont: 'Montserrat', sans-serif;
@@ -28,7 +28,6 @@ dd {
 	margin: 0;
 	padding: 0;
 	font: inherit;
-	font-size: inherit;
 	font-weight: inherit;
 	text-decoration: inherit;
 	font-family: $plainTextFont;
@@ -59,6 +58,7 @@ body {
 	line-height: 1.5;
 	font-size: 1em;
 	background-color: $bodyBgColor;
+	overflow-x: hidden;
 }
 
 img,
