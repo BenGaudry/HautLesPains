@@ -2,19 +2,19 @@
 const lat = 45.79214582753273;
 const lon = 4.4248785829709085;
 var macarte = null;
-var deposits = null;
 // Fonction d'initialisation de la carte
 function initMap(imgpath) {
+	fetch("http://localhost/HautLesPains2/config/apis/api-depots.php", {
+		"method": "GET",
+	})
+	.then(response => response.json())
+	.then(data => {
+		addPinToMap(data, imgpath)
+	})
+	.catch(err => {
+		console.error(err)
+	});
 
-	var requestURL = 'http://localhost/HautLesPains2/config/db/depots.json';
-	var request = new XMLHttpRequest();
-	request.open('GET', requestURL);
-	request.responseType = 'json';
-	request.send();
-	request.onload = function () {
-		deposits = request.response;
-		addPinToMap(imgpath);
-	}
 
 	// Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
 	macarte = L.map('map').setView([lat, lon], 17);
@@ -27,9 +27,7 @@ function initMap(imgpath) {
 	}).addTo(macarte);
 }
 
-console.log(deposits);
-
-function addPinToMap(imgpath) {
+function addPinToMap(deposits, imgpath) {
 	for (i in deposits) {
 		if (deposits[i].name === "Le fournil") {
 			var myIcon = L.icon({

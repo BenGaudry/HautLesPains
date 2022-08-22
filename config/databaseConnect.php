@@ -4,9 +4,9 @@
     $password = "";
 
     try{
-        $bdd = new mysqli("localhost", $username, $password, "hautlespains");
-        //On définit le mode d'erreur de PDO sur Exception
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $bdd = new PDO('mysql:host=localhost;dbname=hautlespains', $username, $password);
+      //On définit le mode d'erreur de PDO sur Exception
+      $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		function getIp(){
 			if(!empty($_SERVER['HTTP_CLIENT_IP'])){

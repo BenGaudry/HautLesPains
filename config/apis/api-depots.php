@@ -1,17 +1,32 @@
 <?php
 
-header('Content-Type: application/json');
+  header('Content-Type: application/json; charset=utf-8');
 
   require_once('../databaseConnect.php');
   $recuptype = $bdd->prepare('SELECT * FROM depots');
 	$recuptype->execute();
-  $types = $recuptype->fetchAll(PDO::FETCH_ASSOC);
+  $depots = $recuptype->fetchAll(PDO::FETCH_ASSOC);
  
-  $result['returned']['success'] = true;
-  $result['returned']['message'] = 'SUC: Auth key valid';
-  $result['returned']['nb'] = count($types);
-  $result['types'] = $types;
+  $result['depots'] = $depots;
 
-echo(json_encode($result));
+  echo("{\n");
+  foreach ($depots as $i => $depot) {
+    $i++;
+    $name = $depot['name'];
+    $lat = $depot['lat'];
+    $lon = $depot['lon'];
+    // echo("\"$i\": {\"name\": \"$name\"");
+    $length = count($depots);
 
+    if($i !== $length){
+      echo <<< JSON
+  "$i": {"name": "$name", "lat" : $lat, "lon" : $lon},\n
+JSON;
+    } else {
+      echo <<< JSON
+  "$i": {"name": "$name", "lat" : $lat, "lon" : $lon}\n
+JSON;
+    }
+  }
+  echo("}");
 ?>
