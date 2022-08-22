@@ -28,7 +28,7 @@
   </section>
 
   <section class="hero hero-splitted hero-colored hero-no-padding">
-    <div id="map" style="height: 400px;" class="side">Hello world</div>
+    <div id="map" style="height: 400px;" class="side">Erreur lors du chargement de la carte</div>
 
       <div class="side less-important-side">
         <h1>Points de vente</h1>

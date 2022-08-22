@@ -13,5 +13,4 @@ window.onscroll = function() { //Fonction appelée quand on descend la page
   } else { 
     btn.style.opacity = '0'
   }
-  console.log(x);
 }
