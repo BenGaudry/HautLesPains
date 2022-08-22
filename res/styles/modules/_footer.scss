@@ -1,8 +1,8 @@
 @import 'var';
 
 .page-footer {
+  background-color: $boxBgColor;
   padding: $defaultPadding;
-  max-width: $maxElementsWidth;
   margin: 0 auto;
 
   .footer-links {
@@ -37,7 +37,7 @@
 
     .call-to-action {
       input {
-        background-color: darken($bodyBgColor, 5%);
+        background-color: $bodyBgColor;
         border: 2px solid darken($bodyBgColor, 5%);
         padding: 10px 20px;
       }

@@ -1,51 +1,17 @@
 <?php
 
-try
+header('Content-Type: application/json');
 
-{
+  require_once('../databaseConnect.php');
+  $recuptype = $bdd->prepare('SELECT * FROM depots');
+	$recuptype->execute();
+  $types = $recuptype->fetchAll(PDO::FETCH_ASSOC);
+ 
+  $result['returned']['success'] = true;
+  $result['returned']['message'] = 'SUC: Auth key valid';
+  $result['returned']['nb'] = count($types);
+  $result['types'] = $types;
 
-       // On se connecte à MySQL
-
-       $bdd = new PDO('mysql:host=localhost;dbname=db', 'root', '');
-
-}
-
-catch(Exception $e)
-
-{
-
-       // En cas d'erreur, on affiche un message et on arrête tout
-
-       die('Erreur : '.$e->getMessage());
-
-}
-
-       
-
-// Si tout va bien, on peut continuer
-
-
-
-// On récupère tout le contenu de la table jeux_video
-
-$reponse = $bdd->query('SELECT * FROM depots');
-
-
-
-// On affiche chaque entrée une à une
-
-while ($donnees = $reponse->fetch())
-
-{
-
-  print($donnees['name']);
-
-}
-
-       
-
-$reponse->closeCursor(); // Termine le traitement de la requête
-
-
+echo(json_encode($result));
 
 ?>

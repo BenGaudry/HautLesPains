@@ -79,4 +79,8 @@ HTML;
     </nav>
   </header>
 
+  <div id="scrollUp">
+    <a href="#"><img src="<?= $__path__ ?>res/img/icons/arrow-top-page.png" alt=""></a>
+  </div>
+
 <main>

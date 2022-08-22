@@ -18,7 +18,7 @@
             <li><a href="<?= $__path__ ?>templates/tests/design-system.php"><p>Design System</p></a></li>
         </ul>
         <form class="call-to-action">
-            <input type="text" placeholder="Inscrivez-vous à la newsletter">
+            <input type="email" placeholder="Inscrivez-vous à la newsletter" class="newsletter-input">
             <button type="submit">Valider</button>
         </form>
     </div>

@@ -60,10 +60,18 @@
 }
 
 .hero-centered{
+  width: 100%;
   .content{
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.page-title{
+  width: $maxElementsWidth;
+  margin: 0 auto;
+  text-align: left;
+  padding: $defaultPadding;
 }
 
 @media screen and(max-width: 768px){

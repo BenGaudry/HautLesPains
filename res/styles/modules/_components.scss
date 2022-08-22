@@ -1,12 +1,70 @@
 @import 'var';
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+	padding: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondaryTextColor;
+	width: 8px !important;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+  background: $primaryTextColor
+}
+
+#scrollUp {
+	position: fixed;
+	bottom : 30px;
+	right: 30px;
+	height: 50px;
+	width: 50px;
+	border-radius: 35px;
+	opacity: 0;
+	background-color: $primaryTextColor;
+	color: $bodyBgColor;
+	transition: opacity ease-in-out 0.2s;
+
+	a{
+		width: 100%;
+		height: 100%;
+		border-radius: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img{
+			width: 70%;
+			height: 70%;
+			filter: invert(1);
+		}
+	}
+
+	&:hover{
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
 .btn{
 	color: $bodyBgColor;
 	background-color: $accent;
 	border-radius: 100px;
-	transition: background-color 0.3s;
+	transition: background-color, transform, 0.3s;
   border: 2px solid $accent;
   width: fit-content;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	line-break: none;
 
 	a{
 		transition: none;
@@ -17,6 +75,7 @@
 		width: 100% !important;
 		height: 100% !important;
 		display: block;
+		line-break: none;
 		
 		// &::after{
 		// 	content: "→";
@@ -38,23 +97,27 @@
 
 	&:hover{
 		background-color: darken($accent, 10%);
-        border-color: darken($accent, 10%);
+    border-color: darken($accent, 10%);
+	}
+
+	&:active{
+		transform: scale(95%);
 	}
 }
 
 .btn-transparent{
     border-color: $accent;
-    background-color: transparent;
+    background-color: transparent !important;
     a{
-        color: $accent !important;
+    	color: $accent !important;
 
-        &:hover{
-            color: $bodyBgColor !important;
-        }
+			&:hover{
+        color: $bodyBgColor !important;
+      }
     }
 
     &:hover{
-        background-color: darken($accent, 10%);
+      background-color: darken($accent, 10%) !important;
     }
 }
 
@@ -89,9 +152,40 @@
 
 }
 
+.btn-reveal{
+	height: 40px !important;
+	padding: 10px 30px;
+	display: flex;
+	flex-direction: row;
+	gap: 0;
+	width: max-content !important;
+	margin-left: 15px;
+	transition: gap, transform, 0.4s;
+	background-color: $accent !important;
+	
+	span{
+		font-size: 0;
+		transition: font-size 0.4s;
+		color: $bodyBgColor !important;
+		font-weight: 500;
+	}
+
+	img{
+		filter: invert(100%);
+	}
+
+	&:hover{
+		gap: 15px;
+		span{
+			font-size: 1em;
+		}
+	}
+}
+
 .btn-container{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	gap: calc($defaultPadding / 2);
 }
 

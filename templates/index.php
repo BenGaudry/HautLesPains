@@ -31,7 +31,7 @@
     <div id="map" style="height: 400px;" class="side">Hello world</div>
 
       <div class="side less-important-side">
-        <h1>Où me trouver ?</h1>
+        <h1>Points de vente</h1>
         <p>Je travaille au <a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">fournil de Longessaigne</a><br>
         ou des ventes se tiennent, ou je propose<br>
         des livraisons à domicile, ou dans des dépôts<br>
