@@ -28,7 +28,8 @@
   </section>
 
   <section class="hero hero-splitted hero-colored hero-no-padding">
-    <div id="map" style="height: 400px;" class="side">Erreur lors du chargement de la carte</div>
+    <div class="content">
+      <div id="map" style="height: 400px;" class="side"></div>
 
       <div class="side less-important-side">
         <h1>Points de vente</h1>
@@ -37,6 +38,7 @@
         des livraisons à domicile, ou dans des dépôts<br>
         indiqués sur la carte.</p>
       </div>
+    </div>
   </section>
 
   <section class="hero hero-splitted">

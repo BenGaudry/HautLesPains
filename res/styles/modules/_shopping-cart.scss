@@ -1,15 +1,28 @@
 @import 'var';
 
+.carousel-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: calc(2 * $defaultPadding);
+
+  img{
+    aspect-ratio: auto;
+    height: 400px;
+  }
+}
+
 #carousel-left{
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   left: 10%;
 }
 
 #carousel-right{
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   right: 10%;
 }
@@ -27,12 +40,22 @@
 }
 
 .order-summary{
-  background-color: $bodyBgColor;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  background-color: rgb(50, 50, 50);
   width: 100%;
+  padding: $defaultPadding;
+
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $maxElementsWidth;
+
+    h2, p, a, button{
+      color: $bodyBgColor;
+    }
+  }
+
   button{
     width: 30px;
     height: 30px;
@@ -58,18 +81,18 @@
   align-items: center;
   border-radius: 100px;
   height: 40px;
-  border: 2px solid $primaryTextColor;
+  border: 2px solid #fff;
+  padding: 0;
   button{
-    background-color: $primaryTextColor;
+    background-color: #fff;
     padding: 7.5px;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 100px;
     
     img{
       width: 25px;
       height: 25px;
-      filter: invert(100%);
     }
   }
 }

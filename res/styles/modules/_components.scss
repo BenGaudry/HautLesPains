@@ -154,33 +154,24 @@
 
 }
 
-.btn-reveal{
+.btn-img{
 	height: 40px !important;
 	padding: 10px 30px;
 	display: flex;
-	flex-direction: row;
-	gap: 0;
+	justify-content: center;
+	align-items: center;
 	width: max-content !important;
 	margin-left: 15px;
-	transition: gap, transform, 0.4s;
+	transition: transform, 0.4s;
 	background-color: $accent !important;
-	
-	span{
-		font-size: 0;
-		transition: font-size 0.4s;
-		color: $bodyBgColor !important;
-		font-weight: 500;
-	}
+	border-radius: 50px;
 
 	img{
 		filter: invert(100%);
 	}
 
-	&:hover{
-		gap: 15px;
-		span{
-			font-size: 1em;
-		}
+	&:active{
+		background-color: #0db03b !important;
 	}
 }
 
@@ -193,7 +184,7 @@
 
 #map{
 	height: 400px !important;
-	width: calc(100% - 50px) !important;
+	width: 100%;
 }
 
 .bread-img{
@@ -203,4 +194,26 @@
 .nature-progrès-logo{
 	height: 250px;
 	margin: 0 auto;
+	border: 2px solid #018647;
+}
+
+.card{
+	display: flex;
+	background-color: $boxBgColor;
+	padding: $defaultPadding;
+	border-radius: 20px;
+	flex-direction: column;
+
+	.img{
+		height: 150px;
+		width: 250px;
+		background-size: cover !important;
+		background-repeat: none !important;
+		background-position: center !important;
+		border-radius: 20px;
+	}
+	
+	h3{
+		color: $primaryTextColor;
+	}
 }

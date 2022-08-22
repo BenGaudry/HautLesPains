@@ -3,17 +3,24 @@
 .hero{
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 
   .content{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     gap: calc($defaultPadding * 2);
     width: 100%;
+    height: max-content;
     max-width: calc($maxElementsWidth - (2 * $defaultPadding));
     margin: 0 auto;
     padding: $defaultPadding;
+
+    .hero-text-content a{
+      text-decoration: underline !important;
+    }
 
     .hero-text-content p:not(:first-child){
       margin-top: calc($defaultPadding / 8);
@@ -29,6 +36,13 @@
   gap: calc(2* $defaultPadding);
   .content{
     flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+
+    .side{
+      padding: $defaultPadding;
+    }
   }
 }
 
@@ -42,6 +56,7 @@
 
 .hero-no-padding{
   .content{
+    max-width: 100%;
     padding: 0;
     gap: 0;
 
@@ -59,26 +74,23 @@
   flex: 6 !important;
 }
 
-.hero-centered{
-  width: 100%;
-  .content{
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 
-.page-title{
-  width: $maxElementsWidth;
-  margin: 0 auto;
-  text-align: left;
-  padding: $defaultPadding;
-}
-
-@media screen and(max-width: 768px){
+@media screen and(max-width: 817px){
   .hero{
     flex-direction: column;
     .content{
       flex-direction: column;
+      justify-content: left !important;
+    }
+  }
+
+  .btn-container{
+    margin: 0 !important;
+  }
+
+  .hero-no-padding{
+    .content{
+      flex-direction: column-reverse;
     }
   }
 
@@ -91,6 +103,15 @@
   }
 
   #map{
-    height: 400px;
+    height: 400px !important;
+    flex-grow: 15;
+  }
+}
+
+@media screen and(max-width: 1024px){
+  .hero-splitted{
+    .side{
+      flex: 10 !important;
+    }
   }
 }
