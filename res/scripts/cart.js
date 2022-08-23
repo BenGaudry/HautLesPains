@@ -36,10 +36,12 @@ rightCarouselBtn.addEventListener('click', () => {
 
 quantityRemove.addEventListener('click', () => {
   carousel.quantitySet(-1)
+  console.info('Remove')
 })
 
 quantityAdd.addEventListener('click', () => {
   carousel.quantitySet(1)
+  console.info('Add')
 })
 
 
@@ -83,7 +85,12 @@ class BreadCarousel {
   }
 
   quantitySet(val){
-    quantity = quantity + val;
-    quantityDisplayer.textContent = quantity
+    let newQty = quantity + val
+    if(newQty >= 0 && newQty <= 5) {
+      quantity = quantity + val
+      quantityDisplayer.textContent = quantity
+    } else {
+      alert('Le nombre de pains doit être compris entre 0 et 5 (inclus)')
+    }
   }
 }

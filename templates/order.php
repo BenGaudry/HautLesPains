@@ -1,5 +1,7 @@
 <?php require_once '../res/components/header.php'; ?>
 
+<p id="__path__" style="display: none;"><?= $__path__ ?></p>
+
 <section class="hero hero-no-padding">
   <div class="content">
 
@@ -46,24 +48,24 @@
 
 <section class="hero">
   <!-- <h1>Autres produits</h1> -->
-  <div class="content">
+  <div class="content cards-container">
     <div class="card">
       <div class="img" style="background: url(<?= $__path__ ?>res/img/brioche.webp);"></div>
       <h3>Brioche</h3>
       <div class="quantity-selector">
-              <button id="remove">
-                <img src="<?= $__path__ ?>res/img/icons/remove.png" alt="-">
-              </button>
-              <div class="quantity-displayer">
-                <p id="quantity-displayer">0</p>  
-              </div>
-              <button id="add">
-                <img src="<?= $__path__ ?>res/img/icons/add.png" alt="+">
-              </button>
-            </div>
-            <button id="cart" class="btn-img">
-              <img src="<?= $__path__ ?>res/img/icons/cart-add.png" alt="Panier" style="width:40px">
-            </button>
+        <button id="remove">
+          <img src="<?= $__path__ ?>res/img/icons/remove.png" alt="-">
+        </button>
+        <div class="quantity-displayer">
+          <p id="quantity-displayer">0</p>  
+        </div>
+        <button id="add">
+          <img src="<?= $__path__ ?>res/img/icons/add.png" alt="+">
+        </button>
+      </div>
+      <button id="cart" class="btn-img">
+        <img src="<?= $__path__ ?>res/img/icons/cart-add.png" alt="Panier" style="width:40px">
+      </button>
     </div>
   </div>
 </section>

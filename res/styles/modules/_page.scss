@@ -35,7 +35,7 @@
 .hero-splitted{
   gap: calc(2* $defaultPadding);
   .content{
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     text-align: left;
     padding: 0;

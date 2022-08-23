@@ -1,29 +1,29 @@
 @import 'var';
 
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+	background: #f1f1f1;
 	padding: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $secondaryTextColor;
+	background: $secondaryTextColor;
 	width: 8px !important;
 	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-  background: $primaryTextColor
+	background: $primaryTextColor
 }
 
 #scrollUp {
 	position: fixed;
-	bottom : 30px;
+	bottom: 30px;
 	right: 30px;
 	height: 50px;
 	width: 50px;
@@ -33,7 +33,7 @@
 	color: $bodyBgColor;
 	transition: opacity ease-in-out 0.2s;
 
-	a{
+	a {
 		width: 100%;
 		height: 100%;
 		border-radius: 35px;
@@ -41,7 +41,7 @@
 		justify-content: center;
 		align-items: center;
 
-		img{
+		img {
 			width: 70%;
 			height: 70%;
 			filter: invert(1);
@@ -49,27 +49,27 @@
 		}
 	}
 
-	&:hover{
+	&:hover {
 		opacity: 1;
 		cursor: pointer;
 	}
 }
 
-.btn{
+.btn {
 	color: $bodyBgColor;
 	background-color: $accent;
 	border-radius: 100px;
 	transition: background-color, transform, 0.3s;
-  border: 2px solid $accent;
-  width: fit-content;
+	border: 2px solid $accent;
+	width: fit-content;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
 	line-break: none;
 
-	a{
+	a {
 		transition: none;
-		color: $bodyBgColor !important;
+		color: $bodyBgColor  !important;
 		font-size: 1.1em;
 		font-weight: 500 !important;
 		padding: 10px 30px;
@@ -78,7 +78,7 @@
 		display: block;
 		line-break: none;
 		user-select: none;
-		
+
 		// &::after{
 		// 	content: "→";
 		// 	font-size: 0em;
@@ -93,68 +93,70 @@
 		// }
 	}
 
-	&::after{
+	&::after {
 		display: none;
 	}
 
-	&:hover{
+	&:hover {
 		background-color: darken($accent, 10%);
-    border-color: darken($accent, 10%);
+		border-color: darken($accent, 10%);
 	}
 
-	&:active{
+	&:active {
 		transform: scale(95%);
 	}
 }
 
-.btn-transparent{
-    border-color: $accent;
-    background-color: transparent !important;
-    a{
-    	color: $accent !important;
+.btn-transparent {
+	border-color: $accent;
+	background-color: transparent !important;
 
-			&:hover{
-        color: $bodyBgColor !important;
-      }
-    }
+	a {
+		color: $accent  !important;
 
-    &:hover{
-      background-color: darken($accent, 10%) !important;
-    }
+		&:hover {
+			color: $bodyBgColor  !important;
+		}
+	}
+
+	&:hover {
+		background-color: darken($accent, 10%) !important;
+	}
 }
 
-.btn-noborder{
+.btn-noborder {
 	border-color: transparent;
 	background-color: transparent;
 	position: relative;
 
-	a{
-		color: $secondaryTextColor !important;
+	a {
+		color: $secondaryTextColor  !important;
 		padding: 0;
 		transition: color 0.2s;
-		
-		&::after{
+
+		&::after {
 			content: "→";
 			margin-left: 10px;
 			transition: margin-left 0.2s;
 		}
 
-		&:hover{
-			color: $primaryTextColor !important;
-			&::after{
+		&:hover {
+			color: $primaryTextColor  !important;
+
+			&::after {
 				margin-left: 18px;
 			}
 		}
 	}
 
-	&:hover{
+	&:hover {
 		background-color: transparent;
 		border-color: transparent;
 	}
 
 }
 
-.btn-img{
+.btn-img {
 	height: 40px !important;
 	padding: 10px 30px;
 	display: flex;
@@ -163,48 +165,48 @@
 	width: max-content !important;
 	margin-left: 15px;
 	transition: transform, 0.4s;
-	background-color: $accent !important;
+	background-color: $accent  !important;
 	border-radius: 50px;
 
-	img{
+	img {
 		filter: invert(100%);
 	}
 
-	&:active{
-		background-color: #0db03b !important;
+	&:active {
+		background-color: #99ffaa !important;
 	}
 }
 
-.btn-container{
+.btn-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: calc($defaultPadding / 2);
 }
 
-#map{
+#map {
 	height: 400px !important;
 	width: 100%;
 }
 
-.bread-img{
+.bread-img {
 	width: 100%;
 }
 
-.nature-progrès-logo{
+.nature-progrès-logo {
 	height: 250px;
 	margin: 0 auto;
 	border: 2px solid #018647;
 }
 
-.card{
+.card {
 	display: flex;
 	background-color: $boxBgColor;
 	padding: $defaultPadding;
 	border-radius: 20px;
 	flex-direction: column;
 
-	.img{
+	.img {
 		height: 150px;
 		width: 250px;
 		background-size: cover !important;
@@ -212,8 +214,8 @@
 		background-position: center !important;
 		border-radius: 20px;
 	}
-	
-	h3{
+
+	h3 {
 		color: $primaryTextColor;
 	}
 }
