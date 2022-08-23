@@ -49,6 +49,8 @@
 <section class="hero">
   <!-- <h1>Autres produits</h1> -->
   <div class="content cards-container">
+
+
     <div class="card">
       <div class="img" style="background: url(<?= $__path__ ?>res/img/brioche.webp);"></div>
       <h3>Brioche</h3>
