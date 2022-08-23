@@ -13,22 +13,22 @@
     <div id="carousel">
 
       <div class="carousel-section">
-        <img src="<?= $__path__ ?>res/img/levainbread.png" alt="">
+        <img src="<?= $__path__ ?>res/img/levainbread.png" alt="" id="carousel-bread-img">
         <div class="order-summary">
           <div class="content">
             <div class="left">
-              <h2>Semi-complet</h2>
+              <h2 id="carousel-bread-name">Semi-complet</h2>
             </div>
 
             <div class="right">
               <div class="quantity-selector">
-                <button id="remove">
+                <button id="quantity-remove">
                   <img src="<?= $__path__ ?>res/img/icons/remove.png" alt="-">
                 </button>
                 <div class="quantity-displayer">
                   <p id="quantity-displayer">0</p>  
                 </div>
-                <button id="add">
+                <button id="quantity-add">
                   <img src="<?= $__path__ ?>res/img/icons/add.png" alt="+">
                 </button>
               </div>
@@ -62,10 +62,12 @@
               </button>
             </div>
             <button id="cart" class="btn-img">
-              <img src="<?= $__path__ ?>res/img/icons/cart-add.png" alt="Panier">
+              <img src="<?= $__path__ ?>res/img/icons/cart-add.png" alt="Panier" style="width:40px">
             </button>
     </div>
   </div>
 </section>
+
+<script src="<?= $__path__ ?>res/scripts/cart.js"></script>
 
 <?php require_once '../res/components/footer.php'; ?>

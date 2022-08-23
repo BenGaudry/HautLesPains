@@ -19,7 +19,7 @@
           </div>
         </div>
 
-      </div>
+
 
       <div class="side no-mobile">
         <img src="<?= $__path__ ?>/res/img/levainbread.png" alt="Le pain au levain" class="bread-img fadein">
