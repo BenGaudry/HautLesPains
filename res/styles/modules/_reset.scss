@@ -67,14 +67,21 @@ picture {
 	display: block;
 }
 
-input,
 button,
-textarea,
 select {
 	font: inherit;
 
 	&:hover {
 		cursor: pointer;
+	}
+}
+
+input,
+textarea{
+	font: inherit;
+
+	&:hover{
+		cursor: text;
 	}
 }
 

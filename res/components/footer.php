@@ -20,7 +20,7 @@
         </ul>
         <form class="call-to-action">
             <input type="email" placeholder="Inscrivez-vous à la newsletter" class="newsletter-input">
-            <button type="submit">Valider</button>
+            <button type="submit" class="auth-submit">Valider</button>
         </form>
     </div>
     <p class="copyright">© Haut les pains 2022 - Tous droits réservés - <a href="mailto: web-hautlespains@outlook.fr">web-hautlespains@outlook.fr</a> - <a href="tel:+33637297926">+33 6 37 29 79 26</a></p>

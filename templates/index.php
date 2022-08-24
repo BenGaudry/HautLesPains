@@ -15,7 +15,7 @@
             <a href="<?= $__path__ ?>templates/order.php">Commander</a>
           </div>
           <div class="btn btn-transparent fadein">
-            <a href="">Découvrir</a>
+            <a href="https://le-fournil.jimdosite.com/notre-travail/" target="_blank">Découvrir</a>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="btn-container">
           <div class="btn btn-noborder">
-            <a href="https://www.natureetprogres.org/" target="_blank">Découvrir</a>
+            <a href="https://www.natureetprogres.org/" target="_blank">En savoir plus</a>
           </div>
         </div>
       </div>
