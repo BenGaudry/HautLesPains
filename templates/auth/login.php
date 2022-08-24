@@ -2,7 +2,7 @@
 
 <h1 class="page-title">Se connecter</h1>
 
-<form action="" method="POST" class="auth-form">
+<form action="../../config/process/login-process.php" method="POST" class="auth-form">
 
   <label class="input-desc" for="email">Email</label>
   <input type="email" name="email" id="email">
