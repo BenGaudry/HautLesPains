@@ -20,6 +20,12 @@
   </div>
 
   <button type="submit" class="auth-submit">Suivant</button>
+
+  <?php
+    $progressBarSections = 3;
+    $activeSections = 1;
+    require_once('../../res/components/progress-bar.php');
+  ?>
 </form>
 
 <!-- <script>

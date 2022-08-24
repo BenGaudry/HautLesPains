@@ -298,3 +298,23 @@
 		width: calc(350px - 70px);
 	}
 }
+
+.progress-bar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	gap: 15px;
+	
+	div{
+		height: 5px;
+		border-radius: 2.5px;
+		width: 50px;
+		margin-top: $defaultPadding;
+		background-color: darken($boxBgColor, 8%);
+	}
+
+	.active-section{
+		background-color: $accent;
+	}
+}
