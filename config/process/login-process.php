@@ -16,12 +16,12 @@
   //       setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours
   //       setcookie('id', $data['id'], time()+60*60*24*365);
 
-  //       header('Location: index.php?n=FSUC2');
+  //       header('Location: ../../templates/index.php?n=FSUC2');
   //     }
   //   }
   // } else {
 
-  if(isset($_POST['email']) && isset($_POST['pass'])){// les champs sont renseignés
+  if(isset($_POST['email']) && isset($_POST['pass'])){ // les champs sont renseignés
     $email = htmlspecialchars($_POST['email']);
     $pass = htmlspecialchars($_POST['pass']);
 

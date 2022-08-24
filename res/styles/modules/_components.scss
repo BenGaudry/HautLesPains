@@ -318,3 +318,36 @@
 		background-color: $accent;
 	}
 }
+
+#notification{
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: rgba(150, 150, 150, 1);
+	color: rgba(255, 255, 255, 0.8);
+	height: max-content;
+	width: max-content;
+	border-radius: 5px;
+	z-index: 1500;
+	padding: calc($defaultPadding / 2) $defaultPadding;
+
+	button {
+		background-color: rgba(255, 255, 255, 0.5);
+		color: inherit;
+		border: none;
+		padding: 2px 5px;
+		border-radius: 5px;
+		margin-left: 15px;
+	}
+}
+
+.notif-error{
+	background: #ff0000 !important;
+}
+
+.notif-success{
+	background-color: #6ff56f !important;
+}

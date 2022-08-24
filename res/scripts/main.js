@@ -36,3 +36,10 @@ function addCountryCodes(selectId) {
 		console.error(err)
 	});
 }
+
+function closeNotification(){
+  document.getElementById("notification").style.opacity = "0";
+  setTimeout(() => {
+      document.getElementById("notification").style.display = "none"
+  }, 300);
+}
