@@ -120,3 +120,46 @@
   font-size: 0.5em;
   margin-left: 5px;
 }
+
+
+
+.bills{
+  display: flex;
+  flex-direction: column;
+}
+
+.bill{
+  border-bottom: 1px solid $borderColor;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:first-child {
+    border-top: 1px solid $borderColor;
+  }
+
+  .bill-title, .bill-price{
+    font-weight: 600;
+  }
+
+  .bill-price{
+    font-size: 1.5em;
+  }
+
+  .bill-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    a{
+      display: block;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+}
