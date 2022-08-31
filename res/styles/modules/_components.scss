@@ -335,7 +335,7 @@
 	padding: calc($defaultPadding / 2) $defaultPadding;
 
 	button {
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: rgba(255, 255, 255, 0.35);
 		color: inherit;
 		border: none;
 		padding: 2px 5px;
@@ -345,9 +345,9 @@
 }
 
 .notif-error{
-	background: #ff0000 !important;
+	background: $red !important;
 }
 
 .notif-success{
-	background-color: #6ff56f !important;
+	background-color: $green !important;
 }

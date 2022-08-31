@@ -14,7 +14,6 @@
             <li><a href="#"><p>Mentions légales</p></a></li>
             <li><a href="#"><p>Conditions d'utilisation</p></a></li>
             <li><a href="#"><p>CGV</p></a></li>
-            <li><a href="#"><p>Plan du site</p></a></li>
             <li><a href="<?= $__path__ ?>templates/tests/design-system.php"><p>Design System</p></a></li>
             <li><a href="<?= $__path__ ?>config/apis"><p>Apis</p></a></li>
         </ul>

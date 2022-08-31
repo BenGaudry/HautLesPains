@@ -1,18 +1,5 @@
 @import 'var';
 
-.carousel-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: calc(2 * $defaultPadding);
-
-  img{
-    aspect-ratio: auto;
-    height: 400px;
-  }
-}
-
 #carousel-left{
   position: absolute;
   top: 40%;
@@ -28,75 +15,184 @@
 }
 
 .btn-arrow{
+  font-size: 1.5em;
+  background-color: transparent;
+  text-align: center;
+  border: none;
   width: 50px;
   height: 50px;
-  background-color: transparent;
-  border: none;
+  line-height: 50px;
+  background-color: $bodyBgColor;
+  border-radius: 50%;
 
-  img{
-    width: 50px;
-    height: 50px;
+  i{
+    vertical-align: middle;
   }
 }
 
-.order-summary{
-  background-color: rgb(50, 50, 50);
+.carousel{
+  width: $maxElementsWidth;
+  height: 400px;
+  background-color: tomato;
+}
+
+
+
+
+
+
+
+
+
+.title {
+  font-size: 3rem;
+  color:white !important;
+  margin:0 !important;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color:white !important;
+  margin:15px 0 25px !important;
+  font-weight:normal;
+}
+
+.sliderCta {
+  padding: 10px 25px;
+  background-color: $accent;
+  border-radius: 50px;
+  text-decoration: none;
+  color:white;
+}
+
+#myContainer{
+  height:100vh;
+}
+
+#slider {
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  padding: $defaultPadding;
-
-  .content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: $maxElementsWidth;
-
-    h2, p, a, button{
-      color: $bodyBgColor;
-    }
-  }
-
-  button{
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-  
-    img{
-      width: 30px;
-      height: 30px;
-    }
-  }
-
-  .right{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-  }
+  height: 100%;
 }
 
-.quantity-selector{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 100px;
-  height: 40px;
-  border: 2px solid #fff;
-  padding: 0;
-  button{
-    background-color: #fff;
-    padding: 7.5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
+.singleSlide {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  opacity: 0;
+}
+
+.slideOverlay {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  padding: 0 100px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+.sliderNav {
+  position: absolute !important;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  display: inline-block;
+  background: transparent;
+  text-indent: -9999px;
+  border: none;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transition: all 250ms ease-in-out;
+  text-decoration: none;
+  color: transparent;
+}
+
+.sliderNav:hover {
+  cursor: pointer;
+}
+
+#sliderPrev {
+  left:25px;
+  transform: rotate(-45deg);
+}
+
+#sliderNext {
+  right:25px;
+  transform: rotate(135deg);
+}
+
+#sliderNext img,
+#sliderPrev img {
+  width: 32px;
+}
+
+#dots{
+    position: absolute;
+    top: 620px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+    .dot{
+        margin:12px;
+        background-color: #ffffff70;
+        height:12px;
+        width:12px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
     
-    img{
-      width: 25px;
-      height: 25px;
-    }
-  }
+
+@-webkit-keyframes slideIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
-.quantity-displayer{
-  margin: 0 15px;
+@keyframes slideIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.slideIn {
+  -webkit-animation: slideIn 0.3s forwards linear;
+  animation: slideIn 0.3s forwards linear;
+}
+
+.slideOut {
+  -webkit-animation: slideOut 0.3s forwards linear;
+  animation: slideOut 0.3s forwards linear;
+}
+
+@-webkit-keyframes slideOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes slideOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+#mySlider{
+  height:600px;
+  right:0;
+  left:0;
+  bottom:0;
+  top:0;
+  
 }

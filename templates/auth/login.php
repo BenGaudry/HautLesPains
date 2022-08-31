@@ -1,6 +1,6 @@
 <?php 
 require_once '../../res/components/header.php';
-require_once('../config/databaseConnect.php');
+require_once('../../config/databaseConnect.php');
 ?>
 
 

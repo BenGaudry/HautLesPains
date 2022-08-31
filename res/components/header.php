@@ -18,7 +18,7 @@ function nav_item(string $lien, string $titre, string $optionalClass = NULL):str
   $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/HautLesPains2/' . $lien;
   $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
-  if($url === $l){
+  if(strpos($url, $lien) !== false){
     $class .= ' active';
   }
 
@@ -71,7 +71,7 @@ HTML;
 				<?= nav_item('templates/index.php', 'Accueil') ?>
 				<li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
         <?= nav_item('templates/order.php', 'Commander') ?>
-				<?= nav_item('templates/profile.php', 'Profil', 'btn') ?>
+				<?= nav_item('templates/profile.php?tab=informations', 'Profil', 'btn') ?>
       </ul>
 
       <button type="button" onclick="toggleMenu()" id="menu-btn" class="menu-btn">
