@@ -3,6 +3,7 @@
 
 
 <div id="mySlider"></div>
+<div id="otherProducts" class="card-container"></div>
 
 
 <script src="<?= $__path__ ?>res/scripts/cart.js"></script>

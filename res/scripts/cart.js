@@ -221,3 +221,53 @@ function addItemsToCarousel(items) {
   miaslider.init();
 
 }
+
+
+window.onload = () => {
+  let products = new OtherProducts
+  products.addProduct()
+}
+
+fetch("http://localhost/HautLesPains2/config/apis/api-products.php", {
+  "method": "GET",
+})
+.then(response => response.json())
+.then(data => {
+  let cards = new OtherProducts(data)
+  cards.init()
+})
+.catch(err => {
+  console.error(err)
+})
+
+
+class OtherProducts {
+
+  constructor(items) {
+    this.items = items
+  }
+
+  init() {
+    let nbItems = Object.keys(this.items).length
+    for(let i = 1; i <= nbItems; i++) {
+      this.addProduct(this.items[i])
+    }
+  }
+
+  addProduct(item) {
+    let container = document.getElementById('otherProducts')
+    let htmlcontent = "" +
+    "<div class=\"card\">"+
+    "<div class=\"image\" style=\"background-image: url(../res/img/products/" + item.path + ")\"></div>"+
+    "<h2>" + item.name + "</h2>"+
+    "<p>" + item.price + "0€</p>"+
+    "<a class=\"add-to-cart-btn\">"+
+    "<i class=\"fi fi-rr-shopping-cart-add\"></i>"+
+    "Ajouter au panier"+
+    "</a>"+
+    "</div>"
+
+    container.innerHTML += htmlcontent
+  }
+
+}

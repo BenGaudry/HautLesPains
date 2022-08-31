@@ -199,43 +199,6 @@
 	border: 2px solid #018647;
 }
 
-.cards-container{
-	display: flex;
-	align-items: center;
-}
-
-.card {
-	display: flex;
-  background-color: rgb(50, 50, 50);
-	padding: calc($defaultPadding / 2);
-	border-radius: 20px;
-	flex-direction: column;
-	max-width: fit-content;
-	text-align: left;
-
-	.card-actions{
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.img {
-		height: 150px;
-		width: 250px;
-		background-size: cover !important;
-		background-repeat: none !important;
-		background-position: center !important;
-		border-radius: 20px;
-	}
-
-	h3 {
-		color: $bodyBgColor;
-	}
-
-	p {
-		color: $bodyBgColor
-	}
-}
-
 .page-title{
 	text-align: center;
 	margin: $defaultPadding 0;
@@ -350,4 +313,59 @@
 
 .notif-success{
 	background-color: $green !important;
+}
+
+.card-container{
+	max-width: $maxElementsWidth;
+	margin: 0 auto;
+	padding: $defaultPadding;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+}
+
+.card{
+	border-radius: 25px;
+	padding: calc($defaultPadding / 1.25);
+	box-shadow: 0 0 10px rgb(211 211 211 / 75%);
+
+	.image{
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 15px;
+		width: 100%;
+		height: 150px;
+		margin-bottom: 15px;
+	}
+}
+
+.add-to-cart-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: #e6eaeb;
+	margin-top: 15px;
+	transition: background-color, color, 0.3s;
+	font-weight: 600;
+	font-size: 1.1em;
+
+	h2, p{
+		margin: 0;
+		padding: 0;
+	}
+
+	i {
+		margin-right: 5px;
+		line-height: 0.75em;
+	}
+
+	&:hover{
+		cursor: pointer;
+		background-color: $accent;
+		color: #fff;
+	}
 }
