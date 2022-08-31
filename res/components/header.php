@@ -1,5 +1,4 @@
 <?php
-session_start();
 $__path__ = 'http://localhost/HautLesPains2/';
 
 function page_title() {
@@ -14,7 +13,6 @@ function page_title() {
 
 function nav_item(string $lien, string $titre, string $optionalClass = NULL):string {
 
-  $__path__ = 'http://localhost/HautLesPains2/';
   $class = ''; // Classe par défaut du menu
 
   $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/HautLesPains2/' . $lien;
@@ -43,7 +41,7 @@ HTML;
   <!-- Social -->
   <!-- Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="<?php print(page_title()) ?>">
+  <meta property="og:title" content="<?= page_title() ?>">
   <meta property="og:description" content="Le site web Haut Les Pains permet de commander, de consulter les points de livraison et les dates de fournée de Lison Loup au fournil de Longessaigne.">
   <meta property="og:image" content="res/img/favicon/favicon.png">
   <meta property="og:image:width" content="1200">
@@ -52,6 +50,7 @@ HTML;
   <meta name="theme-color" content="#fff">
   <link rel="icon" href="<?= $__path__ ?>res/img/favicon/favicon.png" type="image/png">
   <link rel="stylesheet" href="<?= $__path__ ?>res/styles/app.css">
+  <link rel="stylesheet" type="text/css" href="<?= $__path__ ?>res/img/uicons-regular-rounded/css/uicons-regular-rounded.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <script src="<?= $__path__ ?>res/scripts/main.js" defer></script>
 </head>

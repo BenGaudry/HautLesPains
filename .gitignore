@@ -15,3 +15,5 @@ yarn-error.log
 *.lock
 *.tmp
 *.exe
+
+uicons-regular-rounded/

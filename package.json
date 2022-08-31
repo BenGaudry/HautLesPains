@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BenGaudry/HautLesPains-v2/issues"
   },
-  "homepage": "https://github.com/BenGaudry/HautLesPains-v2#readme"
+  "homepage": "https://github.com/BenGaudry/HautLesPains-v2#readme",
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^1.7.0"
+  }
 }

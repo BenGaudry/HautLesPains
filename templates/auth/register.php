@@ -1,4 +1,8 @@
-<?php require_once '../../res/components/header.php'; ?>
+<?php 
+require_once '../../res/components/header.php';
+require_once('../config/databaseConnect.php');
+?>
+
 
 <h1 class="page-title">S'inscrire</h1>
 

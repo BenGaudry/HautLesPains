@@ -1,7 +1,49 @@
 @import 'var';
 
 .profile-header{
-  max-width: $maxElementsWidth;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
+  padding: $defaultPadding;
+
+  nav{
+    width: 100%;
+
+    ul{
+      display: flex;
+      flex-direction: row;
+      gap: $defaultPadding;
+      max-width: $maxElementsWidth;
+      margin: 0 auto;
+
+      li{
+        border-bottom: 2px solid transparent;
+        a{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+          
+          img{
+            width: 20px;
+          }
+
+          span{
+            font-weight: 600;
+            font-size: 1.2em;
+          }
+        }
+      }
+
+      .active-profile-tab{
+        border-bottom-color: $accent !important;
+        
+        a {
+          span {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
 }

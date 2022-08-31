@@ -1,4 +1,4 @@
-<?php 
+<?php
   require_once '../databaseConnect.php';
 
   // if(isset($_COOKIE['authToken']) && isset($_COOKIE['id'])){
