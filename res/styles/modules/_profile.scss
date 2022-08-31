@@ -51,13 +51,14 @@
 }
 
 .profile-content-section{
-  display: flex;
   max-width: $maxElementsWidth;
   margin: 0 auto;
   margin-bottom: $defaultPadding;
   padding: $defaultPadding;
   border: 1px solid $borderColor;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 
   h2{
     i{
@@ -65,4 +66,57 @@
       font-size: 0.8em;
     }
   }
+
+  .content{
+    display: flex;
+    justify-content: space-between;
+    padding: $defaultPadding 0;
+  }
+
+  input[type=submit] {
+    position: relative;
+    width: fit-content;
+    float: right;
+    background-color: $accent;
+    color: $bodyBgColor;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+}
+
+.danger-zone{
+  h2, p{
+    color: #ff0000;
+  }
+
+  border-color: #ff0000;
+  background-color: #ff000015;
+
+  input[type=submit] {
+    background-color:#ff0000;
+    font-weight: 800;
+  }
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+
+  label{
+    color: $secondaryTextColor;
+  }
+
+  input {
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 1.2em;
+  }
+}
+
+.logout-btn{
+  font-size: 0.5em;
+  margin-left: 5px;
 }

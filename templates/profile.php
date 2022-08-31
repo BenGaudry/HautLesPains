@@ -41,7 +41,10 @@ function tabs() {
 ?>
 
 <header class="profile-header">
-  <h1><?= $_SESSION['user']." ".$_SESSION['lastName'] ?></h1>
+  <h1>
+    <?= $_SESSION['user']." ".$_SESSION['lastName'] ?>
+    <a href="../config/process/logout.php" title="Se déconnecter" class="logout-btn"><i class="fi fi-rr-exit"></i></a>
+  </h1>
   <p>Inscrit depuis <?= registered_since() ?></p>
 
   <nav>
