@@ -25,7 +25,7 @@
     $email = htmlspecialchars($_POST['email']);
     $pass = htmlspecialchars($_POST['pass']);
 
-    $check = $bdd->prepare('SELECT id, prenom, nom, email, tel, pass FROM users WHERE email = :email');
+    $check = $bdd->prepare('SELECT id, prenom, nom, email, tel, pass, registerDate FROM users WHERE email = :email');
     $check->execute(['email' => $email]);
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -40,6 +40,9 @@
           $_SESSION['email'] = $email;
           $_SESSION['tel'] = $data['tel'];
           $_SESSION['id'] = $data['id'];
+          $_SESSION['registerDate'] = $data['registerDate'];
+
+
           $token = hash('sha256',$data['prenom'] . $data['email']);
           setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours
           setcookie('id', $data['id'], time()+60*60*24*365);

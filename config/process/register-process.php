@@ -24,7 +24,7 @@
 								$password = hash('sha256', $password);
 								$ip = getIp();
 
-								$insert = $bdd->prepare('INSERT INTO users(prenom, nom, email, tel, pass, registerDate, ip) VALUES(:name, :lastName, :email, :phone, :password, CURDATE(), :ip)');
+								$insert = $bdd->prepare('INSERT INTO users(prenom, nom, email, tel, pass, registerDate, ip) VALUES(:name, :lastName, :email, :phone, :password, NOW(), :ip)');
 								$insert->execute(array(
 									'name' => $name,
 									'lastName' => $lastName,
@@ -34,19 +34,20 @@
 									'ip' => getIp()
                                 ));
 								
-								$req = $bdd->prepare('SELECT id FROM users WHERE email = ?');
-								$req->execute(array($email));
+								$req = $bdd->prepare('SELECT id, registerDate FROM users WHERE email = :email');
+								$req->execute([
+									'email' => $email
+								]);
 								$data = $req->fetch();
-								$id = $data['id'];
 								$_SESSION['user'] = $name;
 								$_SESSION['lastName'] = $lastName;
                 $_SESSION['email'] = $email;
 								$_SESSION['tel'] = $phone;
-								$_SESSION['id'] = $id;
-
+								$_SESSION['id'] = $data['id'];
+								$_SESSION['registerDate'] = $data['registerDate'];
+								
                 $token = hash('sha256',$name . time());
                 setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours
-                print_r($_POST);
                 header('Location: ../../templates/auth/checkEmail.php');
 
 

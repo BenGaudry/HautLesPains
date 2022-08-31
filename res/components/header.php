@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 $__path__ = 'http://localhost/HautLesPains2/';
 
 function page_title() {
