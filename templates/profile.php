@@ -15,11 +15,9 @@ function registered_since() {
   $date2 = $date1->diff(new DateTime($date_fin));
 
   if($date2->days <= 1) {
-    return('hier');
+    return('moins d\'un jour');
   } else if ($date2->days > 1) {
     return($date2->days.' jours');
-  } else {
-    return('aujourd\'hui');
   }
 
 }
@@ -33,6 +31,8 @@ function tabs() {
     } else {
       $tab = "user/infos.php";
     }
+  } else {
+    $tab = "user/infos.php";
   }
 
   return $tab;
@@ -46,12 +46,12 @@ function tabs() {
 
   <nav>
     <ul>
-      <li class="active-profile-tab"><a href="<?= $__path__ ?>templates/profile.php?tab=informations">
-        <i class="fi fi-rr-file-invoice"></i>
+      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "informations") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>templates/profile.php?tab=informations">
+        <i class="fi fi-rr-user"></i>
         <span>Informations</span>
       </a></li>
-      <li><a href="<?= $__path__ ?>templates/profile.php?tab=factures">
-        <img src="<?= $__path__ ?>res/img/icons/bill.png" alt="">
+      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "factures") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>templates/profile.php?tab=factures">
+        <i class="fi fi-rr-file-invoice"></i>
         <span>Factures</span>
       </a></li>
     </ul>
