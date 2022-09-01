@@ -1,6 +1,6 @@
 <?php 
 require_once '../../res/components/header.php';
-require_once('../config/databaseConnect.php');
+require_once('../../config/databaseConnect.php');
 ?>
 
 
@@ -30,6 +30,9 @@ require_once('../config/databaseConnect.php');
     $activeSections = 1;
     require_once('../../res/components/progress-bar.php');
   ?>
+
+  <p class="change-auth-method">Déjà connecté ? <a href="login.php">Connectez-vous</a></p>
+
 </form>
 
 <!-- <script>

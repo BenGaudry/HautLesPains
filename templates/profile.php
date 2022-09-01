@@ -14,8 +14,10 @@ function registered_since() {
   $date1 = new DateTime($date_debut);
   $date2 = $date1->diff(new DateTime($date_fin));
 
-  if($date2->days <= 1) {
+  if($date2->days < 1) {
     return('moins d\'un jour');
+  } else if ($date2->days == 1) {
+    return($date2->days.' jour');
   } else if ($date2->days > 1) {
     return($date2->days.' jours');
   }

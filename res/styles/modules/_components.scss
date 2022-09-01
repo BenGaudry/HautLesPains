@@ -369,3 +369,17 @@
 		color: #fff;
 	}
 }
+
+.change-auth-method{
+	text-align: center;
+	font-size: 1em;
+	margin-top: 10px;
+
+	a{
+		text-decoration: underline;
+
+		&:hover{
+			color: $accent;
+		}
+	}
+}
