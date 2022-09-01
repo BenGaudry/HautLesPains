@@ -5,7 +5,7 @@
         <ul>
             <li class="footer-section-title"><h5>Site web</h5></li>
             <li><a href="https://github.com/BenGaudry/HautLesPains-v2" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a></li>
-            <li><a href="#"><p>Suggérer des améliorations</p></a></li>
+            <li><a href="https://github.com/BenGaudry/HautLesPains/issues" target="_blank" rel="noopener noreferrer"><p>Suggérer des améliorations</p></a></li>
             <li><a href="#"><p>Nous contacter</p></a></li>
             <li><a href="#"><p>FAQ</p></a></li>
         </ul>

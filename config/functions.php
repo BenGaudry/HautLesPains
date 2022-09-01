@@ -10,7 +10,8 @@ function transformSpecialChars($string){
   return(str_replace($chars, $replaceBy, $string));
 }
 
-function sendEmail($title, $pagetitle, $pagecontent, $redirectSuccess = NULL, $redirectFail = NULL){
+function sendEmail($title, $pagetitle, $pagecontent, $options = NULL){
+  $title = transformSpecialChars($title);
   $pagetitle = transformSpecialChars($pagetitle);
   $pagecontent = transformSpecialChars($pagecontent);
 
@@ -42,26 +43,18 @@ function sendEmail($title, $pagetitle, $pagecontent, $redirectSuccess = NULL, $r
          </table>
      </body>';
 
+  if(isset($options['mailto'])) {
+    $mailto = $options ['mailto'];
+  } else {
+    $mailto = $_SESSION['email'];
+  }
+
   $mail = array(
-    'to' => $_SESSION['email'],
+    'to' => $mailto,
     'title' => $title,
     'content' => $body,
-    'entetes' => $headers['from']."\n".$headers['content-type']."\n".$headers['version']."\n\n",
+    'headers' => $headers['from']."\n".$headers['content-type']."\n".$headers['version']."\n\n",
   );
 
-  if(mail($mail['to'], $mail['title'], $mail['content'], $mail['entetes'])){
-    if($redirectSuccess != NULL){
-      header('Location: '.$redirectSuccess.'');
-    }
-
-    return ($success = true);
-  } else {
-    if($redirectFail != NULL){
-      header('Location: '.$redirectFail.'');
-    } else if ($redirectFail == NULL && $redirectSuccess != NULL){
-      header('Location: '.$redirectSuccess);
-    }
-
-    return ($success = false);
-  }
+  mail($mail['to'], $mail['title'], $mail['content'], $mail['headers']);
 }

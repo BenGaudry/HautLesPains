@@ -17,6 +17,7 @@ require_once('../../config/databaseConnect.php');
   <button type="submit" class="auth-submit">Connexion</button>
 
   <p class="change-auth-method">Pas encore de compte ? <a href="register.php">Inscrivez-vous</a></p>
+  <p class="change-auth-method"><a href="forgot-pass.php">Mot de passe oublié ?</a></p>
 </form>
 
 <!-- <script>

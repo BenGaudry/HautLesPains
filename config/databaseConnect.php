@@ -19,13 +19,8 @@
 			return $ip;
 		}
 
-    function transformSpecialChars($string){
-      $chars = array('é', 'è', 'É', 'È', 'à', '€', 'ç');
-      $replaceBy = array('&#233;','&#232;','&#201;','&#200;','&#224;', '&#8364;', '&#231;');
-      return(str_replace($chars, $replaceBy, $string));
-    }
+    $__path__ = 'http://localhost/HautLesPains2/';
 
-    
   }
   
 
