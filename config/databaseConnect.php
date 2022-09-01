@@ -18,9 +18,6 @@
 				}
 			return $ip;
 		}
-
-    $__path__ = 'http://localhost/HautLesPains2/';
-
   }
   
 

@@ -1,5 +1,5 @@
 <?php
-require_once('../../config/databaseConnect.php');
+$__path__ = 'http://localhost/HautLesPains2/';
 
 function page_title() {
 	if(isset($pageTitle)){

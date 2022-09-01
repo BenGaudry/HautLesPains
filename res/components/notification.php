@@ -6,7 +6,7 @@
         'FERR4' => 'Format de l\'email incorrect',
         'FERR5' => 'Les mots de passe ne correspondent pas',
         'FERR6' => 'Email non existant',
-        'FERR7' => 'Mot de passe incorrect',
+        'FERR7' => 'Email ou mot de passe incorrect',
         'FERR8' => 'Tel déjà utilisé',
         'FSUC1' => 'Données modifiées avec succès',
         'FSUC2' => 'Connexion réussie',
@@ -16,6 +16,7 @@
         'OERR1' => 'Veuillez vérifier votre email pour passer une commande',
         'OERR2' => 'Nombre de pains doit être compris entre 0 et 5 inclus',
         'OSUC1' => 'Commande réussie',
+        'FPSUC1' => 'Un email à été envoyé pour réinitialiser le mot de passe',
     ];
 
     if (isset($_GET['n'])) {

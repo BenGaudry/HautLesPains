@@ -1,6 +1,7 @@
 <?php
 
 require_once('../databaseConnect.php');
+require_once('../../res/components/header.php');
 require_once('../functions.php');
 
 
@@ -23,6 +24,7 @@ if(isset($_POST['email'])){ // les champs sont renseignés
           'mailto' => $email
         ]
       );
+      header('Location: ../../templates/auth/login.php?n=FPSUC1');
     } else  header('Location:../../templates/auth/login.php?n=FERR6');
   } else header('Location:../../templates/auth/login.php?n=FERR1');
 }
