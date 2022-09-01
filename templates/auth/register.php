@@ -8,19 +8,19 @@ require_once('../../config/databaseConnect.php');
 
 <form action="register-password.php" method="POST" class="auth-form">
   <label class="input-desc" for="prenom">Prénom</label>
-  <input type="text" name="prenom" id="prenom" required>
+  <input type="text" name="prenom" id="prenom" required onchange="check.str(this)">
 
   <label class="input-desc" for="nom">Nom de famille</label>
-  <input type="text" name="nom" id="nom" required>
+  <input type="text" name="nom" id="nom" required onchange="check.str(this)">
 
   <label class="input-desc" for="email">Email</label>
-  <input type="email" name="email" id="email" required>
+  <input type="email" name="email" id="email" required onchange="check.email(this)">
 
   <label class="input-desc" for="tel">Téléphone</label>
   <div class="tel-input">
     <!-- <select name="country-code" id="country-code"></select> -->
-    <input type="text" name="dial-code" class="dial-code" value="+33" required>
-    <input type="tel" name="tel" id="tel" required>
+    <input type="text" name="dial-code" class="dial-code" value="+33" required  required onchange="check.dialCode(this)">
+    <input type="tel" name="tel" id="tel" required  required onchange="check.tel(this)">
   </div>
 
   <button type="submit" class="auth-submit">Suivant</button>
@@ -40,5 +40,6 @@ require_once('../../config/databaseConnect.php');
     addCountryCodes('country-code');
   }
 </script> -->
+<script src="../../res/scripts/auth-checkings.js"></script>
 
 <?php require_once '../../res/components/footer.php'; ?>

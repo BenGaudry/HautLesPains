@@ -21,11 +21,6 @@ require_once('../../config/databaseConnect.php');
 
 </form>
 
-<!-- <script>
-  window.onload = () => {
-    addCountryCodes('country-code');
-  }
-</script> -->
 <script src="../../res/scripts/auth-checkings.js"></script>
 
 <?php require_once '../../res/components/footer.php'; ?>
