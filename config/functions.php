@@ -11,22 +11,18 @@ function getIp(){
   return $ip;
 }
 
-function transformSpecialChars($string){
-  $chars = ['é', 'è', 'É', 'È', 'à', '€', 'ç'];
-  $replaceBy = ['&#233;','&#232;','&#201;','&#200;','&#224;', '&#8364;', '&#231;'];
-  return(str_replace($chars, $replaceBy, $string));
-}
+function sendEmail(
+    STRING $title, 
+    STRING $pagetitle, 
+    STRING $pagecontent, 
+    ARRAY $options = NULL
+  ): BOOL{
 
-function sendEmail($title, $pagetitle, $pagecontent, $options = NULL){
-  $title = transformSpecialChars($title);
-  $pagetitle = transformSpecialChars($pagetitle);
-  $pagecontent = transformSpecialChars($pagecontent);
-
-  $headers = array(
+  $headers = [
     'from' => 'From: web.hautlespains@outlook.fr',
     'version' => 'MIME-Version: 1.0',
-    'content-type' => 'Content-type: text/html; charset=ISO-8859-1',
-  );
+    'content-type' => 'Content-type: text/html; charset=utf-8',
+  ];
 
   $body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -39,31 +35,48 @@ function sendEmail($title, $pagetitle, $pagecontent, $options = NULL){
      <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
          <table bgcolor="#303030" width="100%" border="0" cellpadding="0" cellspacing="0">
              <tr>
-                <td bgcolor="#dbdbdb" style="text-align:center;"><h1>'.$pagetitle.'</h1></td>
+                <td style="text-align:center;"><h1 style="font-size:1.2em">'.$pagetitle.'</h1></td>
               </tr>
               <tr>
-                <td bgcolor="#fff" style="padding:10px;"><p>'.$pagecontent.'</p></td>
+                <td style="padding:10px;text-align:center;"><p>'.$pagecontent.'</p></td>
               </tr>
               <tr>
-                <td bgcolor="#dbdbdb" style="font-style:italic;font-size: 0.8em; padding:10px;">Ceci est un envoi automatique, il est inutile de r&#233pondre<br>Le service web de Haut les Pains</td>
+                <td style="font-style:italic;font-size: 1em; padding:10px;text-align:center;">Ceci est un envoi automatique, il est inutile de r&#233pondre<br>Le service web de Haut les Pains</td>
              </tr>
          </table>
      </body>';
 
   if(isset($options['mailto'])) {
-    $mailto = $options ['mailto'];
+    $mailto = $options['mailto'];
   } else {
     $mailto = $_SESSION['email'];
   }
 
-  $mail = array(
+  if(isset($options['redirect'])) {
+    $redirect = $options['redirect'];
+  } else {
+    $redirect = [
+      "success" => "templates/index.php",
+      "fail" => "templates/index.php"
+    ];
+  }
+
+  $mail = [
     'to' => $mailto,
     'title' => $title,
     'content' => $body,
     'headers' => $headers['from']."\n".$headers['content-type']."\n".$headers['version']."\n\n",
-  );
+  ];
 
-  mail($mail['to'], $mail['title'], $mail['content'], $mail['headers']);
+  if(mail($mail['to'], $mail['title'], $mail['content'], $mail['headers'])) {
+    header('Location: '.$redirect['success']);
+    $return = true;
+  } else {
+    header('Location: '.$redirect['fail']);
+    $return = false;
+  }
+
+  return $return;
 }
 
 function set_session_vars(
@@ -72,7 +85,7 @@ function set_session_vars(
     STRING $lastName = NULL,
     STRING $email = NULL,
     STRING $tel = NULL,
-    $registerDate = NULL)
+    DATETIME $registerDate = NULL)
   {
 
   if($id !== NULL) {
