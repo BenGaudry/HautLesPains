@@ -2,7 +2,7 @@
 
 require_once('../databaseConnect.php');
 
-if(isset($_POST['edit-account'])) {
+if(isset($_POST['edit-account'])) { // Demande de modifications d'informations
   if(
   isset($_POST['prenom']) && !empty($_POST['prenom']) &&
   isset($_POST['nom']) && !empty($_POST['nom']) &&
@@ -16,6 +16,7 @@ if(isset($_POST['edit-account'])) {
     $email = htmlspecialchars($_POST['email']);
     $tel = htmlspecialchars($_POST['tel']);
 
+    // Requête pour mettre les données à jour
     $req = $bdd->prepare('UPDATE users SET prenom = :prenom, nom = :nom, email = :email, tel = :tel WHERE id = '.$_SESSION['id']);
     print_r($req);
     $req->execute([
@@ -25,10 +26,35 @@ if(isset($_POST['edit-account'])) {
       'tel' => $tel
     ]);
 
+    // On update les données de $_SESSION
     set_session_vars(NULL, $prenom, $nom, $email, $tel);
     header('Location: ../../templates/profile.php?tab=informations&n=FSUC1');
-
+    
   } else header('Location: ../../templates/profile.php?tab=informations&n=FERR1');
+
+} else if (isset($_POST['delete-account'])) { // Demande de suppression du compte
+
+  // Requête pour insérer toutes les infos dans la base des utilisateurs supprimés
+  $insertReq = $bdd->prepare('INSERT INTO deleted_users(old_user_id, prenom, nom, email, tel, registerDate, ip) VALUES (:id, :prenom, :nom, :email, :tel, :registerDate, :ip)');
+  $insertReq->execute([
+    'id' => $_SESSION['id'],
+    'prenom' => $_SESSION['user'],
+    'nom' => $_SESSION['lastName'],
+    'email' => $_SESSION['email'],
+    'tel' => $_SESSION['tel'],
+    'registerDate' => $_SESSION['registerDate'],
+    'ip' => getIp()
+  ]);
+
+
+  // Requête pour supprimer l'utilisateur de la table des utilisateurs actifs
+  $deleteReq = $bdd->prepare('DELETE FROM users WHERE id = '.$_SESSION['id']);
+  $deleteReq->execute();
+
+  // On déconnecte l'utilisateur pour éviter les bugs
+  header('Location: logout.php');
+
 } else header('Location: ../../templates/profile.php?tab=informations');
+
 
 ?>
