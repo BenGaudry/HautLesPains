@@ -57,7 +57,7 @@ HTML;
 
 <body>
 
-<?php require_once('notification.php') ?>
+<div id="notification-container"></div>
 
 <header class="menu-bar">
     <nav>

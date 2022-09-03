@@ -292,28 +292,39 @@
 	}
 }
 
-#notification{
+.notification{
 	position: fixed;
 	top: 15px;
 	right: 15px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	background-color: rgba(150, 150, 150, 1);
-	color: rgba(255, 255, 255, 0.8);
 	height: max-content;
 	width: max-content;
 	border-radius: 5px;
 	z-index: 1500;
-	padding: calc($defaultPadding / 2) $defaultPadding;
 
-	button {
+	p{
+		padding: calc($defaultPadding / 2) $defaultPadding 8px;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	button { // old way to close notif but to keep in case
 		background-color: rgba(255, 255, 255, 0.35);
 		color: inherit;
 		border: none;
 		padding: 2px 5px;
 		border-radius: 5px;
 		margin-left: 15px;
+	}
+
+	.timer {
+		height: 6px;
+		width: 100%;
+		border-radius: 0 0 5px 5px;
+		background-color: rgba(255, 255, 255, 0.65);
+		transition: width 2s;
 	}
 }
 
