@@ -64,7 +64,7 @@ class Notification {
     this.message = message
     this.notifDiv = document.getElementById("notification")
     this.notifContainer = document.getElementById("notification-container")
-    this.timerDuration = "2s"
+    this.timerDuration = 2000
     this.type = this.getType(message)
   }
 
@@ -82,17 +82,18 @@ class Notification {
   add() {
     let div = '<div id="notification" class="notification ' + this.type + '">' + 
       '<p>' + notifMessages[this.message] + '</p>' +
-      '<div class="timer" style="transition-duration: ' + this.timerDuration + '"></div>'
+      '<div class="timer" style="transition-duration: ' + this.timerDuration + 'ms"></div>'
     '</div>';
 
     this.notifContainer.innerHTML += div
     document.querySelector('.timer').style.width = 0
+    setTimeout(this.hide(), this.timerDuration)
   }
 
   hide() {
-    this.notifDiv.style.opacity = "0";
+    document.getElementById('notification').style.opacity = "0";
     setTimeout(() => {
-      this.notifDiv.style.display = "none"
+      document.getElementById('notification').style.display = "none"
     }, 300);
   }
 
