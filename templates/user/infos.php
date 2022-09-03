@@ -40,15 +40,17 @@
 
   <div class="content">
     <div class="form-group">
-      <label for="password">Mot de passe</label>
-      <input type="password" name="password" id="password" placeholder="*****">
+      <label for="edited-password">Mot de passe</label>
+      <input type="password" name="edited-password" id="edited-password" placeholder="*****">
     </div>
 
     <div class="form-group">
-      <label for="password-confirm">Confirmer le mot de passe</label>
-      <input type="password" name="password-confirm" id="password-confirm" placeholder="*****">
+      <label for="edited-password-confirm">Confirmer le mot de passe</label>
+      <input type="password" name="edited-password-confirm" id="edited-password-confirm" placeholder="*****">
     </div>
   </div>
+
+  <input type="submit" value="Modifier mon mot de passe" name="edit-password">
 </section>
 
 <section class="profile-content-section danger-zone">

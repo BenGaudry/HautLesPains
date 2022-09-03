@@ -29,7 +29,7 @@ if(isset($_POST['edit-account'])) { // Demande de modifications d'informations
     // On update les données de $_SESSION
     set_session_vars(NULL, $prenom, $nom, $email, $tel);
     header('Location: ../../templates/profile.php?tab=informations&n=FSUC1');
-    
+
   } else header('Location: ../../templates/profile.php?tab=informations&n=FERR1');
 
 } else if (isset($_POST['delete-account'])) { // Demande de suppression du compte
@@ -53,6 +53,31 @@ if(isset($_POST['edit-account'])) { // Demande de modifications d'informations
 
   // On déconnecte l'utilisateur pour éviter les bugs
   header('Location: logout.php');
+
+} else if (isset($_POST['edit-password'])) {
+  
+  if(
+    isset($_POST['edited-password']) && !empty($_POST['edited-password']) &&
+    isset($_POST['edited-password-confirm']) && !empty($_POST['edited-password-confirm'])
+  ) {
+    
+    if($_POST['edited-password'] === $_POST['edited-password-confirm']) {
+
+      // Hash du nouveau mot de passe 
+      $newpass = hash('sha256', $_POST['edited-password']);
+
+      // Insertion dans la base
+      $insertReq = $bdd->prepare('UPDATE users SET pass = :pass WHERE id = :id');
+      $insertReq->execute([
+        'id' => $_SESSION['id'],
+        'pass' => $newpass
+      ]);
+
+      // Redirection
+      header('Location: ../../templates/profile.php?tab=informations&n=FSUC1');
+
+    } else header('Location: ../../templates/profile.php?tab=informations&n=FERR5');
+  } else header('Location: ../../templates/profile.php?tab=informations&n=FERR1');
 
 } else header('Location: ../../templates/profile.php?tab=informations');
 
