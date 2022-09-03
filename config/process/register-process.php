@@ -38,13 +38,9 @@
 								$req->execute([
 									'email' => $email
 								]);
+								
 								$data = $req->fetch();
-								$_SESSION['user'] = $name;
-								$_SESSION['lastName'] = $lastName;
-                $_SESSION['email'] = $email;
-								$_SESSION['tel'] = $phone;
-								$_SESSION['id'] = $data['id'];
-								$_SESSION['registerDate'] = $data['registerDate'];
+								set_session_vars($data['id'], $name, $lastName, $email, $phone, $data['registerDate']);
 								
                 $token = hash('sha256',$name . time());
                 setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours

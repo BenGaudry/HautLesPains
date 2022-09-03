@@ -2,17 +2,14 @@
   require_once '../databaseConnect.php';
 
   // if(isset($_COOKIE['authToken']) && isset($_COOKIE['id'])){
-  //   $req = $bdd->prepare('SELECT id, prenom, nom, email, tel FROM users WHERE id = :id');
+  //   $req = $bdd->prepare('SELECT id, prenom, nom, email, tel, registerDate FROM users WHERE id = :id');
   //   $req->execute(array('id' => $_COOKIE['id']));
   //   $data = $req->fetch();
   //   if(!empty($data)){
   //     $token = hash('sha256',$data['prenom'] . $data['email']);
   //     if($token === $_COOKIE['authToken']){
-  //       $_SESSION['user'] = $data['prenom'];
-  //       $_SESSION['lastName'] = $data['nom'];
-  //       $_SESSION['email'] = $data['email'];
-  //       $_SESSION['tel'] = $data['tel'];
-  //       $_SESSION['id'] = $data['id'];
+  //      set_session_vars($data['id'], $data['prenom'], $data['nom'], $data['email'], $data['tel'], $data['registerDate']);
+
   //       setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours
   //       setcookie('id', $data['id'], time()+60*60*24*365);
 
@@ -35,13 +32,7 @@
         $pass = hash('sha256', $pass);
         if($data['pass'] === $pass){
 
-          $_SESSION['user'] = $data['prenom'];
-          $_SESSION['lastName'] = $data['nom'];
-          $_SESSION['email'] = $email;
-          $_SESSION['tel'] = $data['tel'];
-          $_SESSION['id'] = $data['id'];
-          $_SESSION['registerDate'] = $data['registerDate'];
-
+          set_session_vars($data['id'], $data['prenom'], $data['nom'], $email, $data['tel'], $data['registerDate']);
 
           $token = hash('sha256',$data['prenom'] . $data['email']);
           setcookie("authToken", $token, time()+60*60*24*365); // le coookie expire dans 365 jours
