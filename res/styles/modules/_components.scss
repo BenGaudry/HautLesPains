@@ -396,3 +396,40 @@
 		}
 	}
 }
+
+.otp-field{
+	display: flex;
+	margin: 0 auto;
+	width: fit-content;
+
+	input {
+		width: 37px;
+		padding: 10px;
+		text-align: center;
+		border-radius: 5px;
+		margin: 4px;
+		border: 2px solid $borderColor;
+		background-color: transparent;
+		outline: none;
+		transition: 0.2s;
+
+		&:focus{
+			border-color: #000;
+			box-shadow: 0 0 2px 2px #00000050;
+		}
+	}
+
+	.disabled {
+		opacity: 0.5;
+	}
+
+	.space {
+		margin-right: 8px !important;
+	}
+}
+
+.text-centered {
+	text-align: center;
+	width: fit-content;
+	margin: 0 auto;
+}
