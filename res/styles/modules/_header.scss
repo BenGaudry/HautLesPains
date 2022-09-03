@@ -58,13 +58,13 @@
           bottom: 0;
           left: 0;
           background-color: lighten($secondaryTextColor, 10%);
-          transform-origin: center;
+          transform-origin: bottom right;
           transition: transform 0.4s ease-out;
         }
 
         &:hover::after {
           transform: scaleX(1);
-          transform-origin: center;
+          transform-origin: bottom left;
         }
 
         a {
