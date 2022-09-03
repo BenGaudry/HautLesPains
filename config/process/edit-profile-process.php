@@ -25,9 +25,8 @@ if(isset($_POST['edit-account'])) {
       'tel' => $tel
     ]);
 
-    set_session_vars(1, 1, 1, 1, 1);
-
-    // header('Location: ../../templates/profile.php?tab=informations&n=FSUC1');
+    set_session_vars(NULL, $prenom, $nom, $email, $tel);
+    header('Location: ../../templates/profile.php?tab=informations&n=FSUC1');
 
   } else header('Location: ../../templates/profile.php?tab=informations&n=FERR1');
 } else header('Location: ../../templates/profile.php?tab=informations');

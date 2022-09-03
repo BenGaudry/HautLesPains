@@ -1,7 +1,14 @@
 <?php
 
-if(!isset($_SESSION)) {
-  session_start();
+function getIp(){
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+      $ip = $_SERVER['REMOTE_ADDR'];
+    }
+  return $ip;
 }
 
 function transformSpecialChars($string){
@@ -59,7 +66,15 @@ function sendEmail($title, $pagetitle, $pagecontent, $options = NULL){
   mail($mail['to'], $mail['title'], $mail['content'], $mail['headers']);
 }
 
-function set_session_vars($id = NULL, $user = NULL, $lastName = NULL, $email = NULL, $tel = NULL, $registerDate = NULL) {
+function set_session_vars(
+    INT $id = NULL,
+    STRING $user = NULL,
+    STRING $lastName = NULL,
+    STRING $email = NULL,
+    STRING $tel = NULL,
+    $registerDate = NULL)
+  {
+
   if($id !== NULL) {
     $_SESSION['id'] = $id;
   }
