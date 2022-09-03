@@ -19,6 +19,7 @@
   // } else {
 
   if(isset($_POST['email']) && isset($_POST['pass'])){ // les champs sont renseignés
+    sleep(1);
     $email = htmlspecialchars($_POST['email']);
     $pass = htmlspecialchars($_POST['pass']);
 

@@ -5,7 +5,7 @@ require_once('../../config/databaseConnect.php');
 // Checkings :
 
 if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['tel'])) {
-  
+  sleep(1);
   $name = htmlspecialchars($_POST['prenom']);
 	$lastName = htmlspecialchars($_POST['nom']);
 	$email = htmlspecialchars($_POST['email']);

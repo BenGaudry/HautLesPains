@@ -2,6 +2,7 @@
   require_once '../databaseConnect.php';
 
   if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['pass']) && isset($_POST['pass-confirm'])){
+		sleep(1);
 		$name = htmlspecialchars($_POST['prenom']);
 		$lastName = htmlspecialchars($_POST['nom']);
 		$email = htmlspecialchars($_POST['email']);
