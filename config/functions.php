@@ -58,3 +58,29 @@ function sendEmail($title, $pagetitle, $pagecontent, $options = NULL){
 
   mail($mail['to'], $mail['title'], $mail['content'], $mail['headers']);
 }
+
+function set_session_vars($id = NULL, $user = NULL, $lastName = NULL, $email = NULL, $tel = NULL, $registerDate = NULL) {
+  if($id !== NULL) {
+    $_SESSION['id'] = $id;
+  }
+
+  if($user !== NULL) {
+    $_SESSION['user'] = $user;
+  }
+
+  if($lastName !== NULL) {
+    $_SESSION['lastName'] = $lastName;
+  }
+
+  if($email !== NULL) {
+    $_SESSION['email'] = $email;
+  }
+  
+  if($tel !== NULL) {
+    $_SESSION['tel'] = $tel;
+  }
+
+  if($registerDate !== NULL) {
+    $_SESSION['registerDate'] = $registerDate;
+  }
+}

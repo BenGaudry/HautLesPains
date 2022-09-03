@@ -1,6 +1,6 @@
 <?php
     $nmessage = [
-        'FERR1' => 'Certains champs sont incomplets',
+        'FERR1' => 'Certains champs sont vides ou incomplets',
         'FERR2' => 'Email déjà utilisé',
         'FERR3' => 'Certains champs dépassent la limitation de caractères',
         'FERR4' => 'Format de l\'email incorrect',

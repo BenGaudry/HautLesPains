@@ -18,6 +18,8 @@
 				}
 			return $ip;
 		}
+
+    require_once('functions.php');
   }
   
 
