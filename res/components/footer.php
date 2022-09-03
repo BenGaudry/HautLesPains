@@ -24,22 +24,5 @@
     </div>
     <p class="copyright">© Haut les pains 2022 - Tous droits réservés - <a href="mailto: web-hautlespains@outlook.fr">web-hautlespains@outlook.fr</a> - <a href="tel:+33637297926">+33 6 37 29 79 26</a></p>
 </footer>
-
-<?php 
-
-if(isset($_GET['n'])) {
-  print("
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const notif = new Notification('".$_GET['n']."')
-    notif.add()
-    notif.showTypes()
-  })
-</script>
-");
-}
-
-?>
-
 </body>
 </html>
