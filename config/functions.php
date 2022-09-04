@@ -54,11 +54,6 @@ function sendEmail(
 
   if(isset($options['redirect'])) {
     $redirect = $options['redirect'];
-  } else {
-    $redirect = [
-      "success" => "templates/index.php",
-      "fail" => "templates/index.php"
-    ];
   }
 
   $mail = [
@@ -69,10 +64,14 @@ function sendEmail(
   ];
 
   if(mail($mail['to'], $mail['title'], $mail['content'], $mail['headers'])) {
-    header('Location: '.$redirect['success']);
+    if(isset($options['redirect'])) {
+      header('Location: '.$redirect['success']);
+    }
     $return = true;
   } else {
-    header('Location: '.$redirect['fail']);
+    if(isset($options['redirect'])) {
+      header('Location: '.$redirect['fail']);
+    }
     $return = false;
   }
 
@@ -85,7 +84,7 @@ function set_session_vars(
     STRING $lastName = NULL,
     STRING $email = NULL,
     STRING $tel = NULL,
-    DATETIME $registerDate = NULL)
+    $registerDate = NULL)
   {
 
   if($id !== NULL) {
