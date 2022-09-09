@@ -68,7 +68,7 @@ function handleOtp(e) {
   input.value = value ? value[0] : ""
 
   let fieldIndex = input.dataset.index
-  if(value.length > 0 && fieldIndex < inputs.length - 1) {
+  if(value.length > 0 && fieldIndex < inputs.length) {
     input.nextElementSibling.focus()
   }
 
@@ -76,7 +76,7 @@ function handleOtp(e) {
     input.previousElementSibling.focus()
   }
 
-  if(fieldIndex == inputs.length - 1) {
+  if(fieldIndex === inputs.length) {
     submit()
   }
 }
@@ -85,8 +85,6 @@ function submit() {
   let otp = ""
   inputs.forEach((input) => {
     otp += input.value
-    input.disabled = true
-    input.classList.add("disabled")
   })
 
   console.log(otp)

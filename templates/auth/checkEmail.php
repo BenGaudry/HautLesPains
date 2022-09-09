@@ -11,7 +11,15 @@ $data = $req->fetch();
 
 if ($data['emailVerified'] !== 1) {
   // L'email n'est pas vérifié
-  if (isset($_POST['checkemail'])) {
+  if (
+    isset($_POST['checkemail']) &&
+    isset($_POST['one']) &&
+    isset($_POST['two']) &&
+    isset($_POST['three']) &&
+    isset($_POST['four']) &&
+    isset($_POST['five']) &&
+    isset($_POST['six'])
+  ) {
 
     $req = $bdd->prepare('SELECT * FROM email_confirm WHERE email = :email ORDER BY id DESC ');
     $req->execute([
@@ -61,7 +69,7 @@ if ($data['emailVerified'] !== 1) {
 <p class="text-centered">Un code OTP a 6 chiffres vous a été envoyé par email</p>
 <p class="text-centered">Vous pouvez le taper, ou le coller çi-dessous</p>
 
-<form action="" method="POST">
+<form action="#" method="POST">
   <div class="otp-field">
     <input type="text" name="one" maxlength="1">
     <input type="text" name="two" maxlength="1">

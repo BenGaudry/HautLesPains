@@ -33,7 +33,7 @@ function sendEmail(
      </head>    
      
      <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-         <table bgcolor="#303030" width="100%" border="0" cellpadding="0" cellspacing="0">
+         <table width="100%" bgcolor="white" color="black" border="0" cellpadding="0" cellspacing="0">
              <tr>
                 <td style="text-align:center;"><h1 style="font-size:1.2em">'.$pagetitle.'</h1></td>
               </tr>
