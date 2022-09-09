@@ -9,13 +9,12 @@
         <li><a href="https://github.com/BenGaudry/HautLesPains/issues" target="_blank" rel="noopener noreferrer"><p>Suggérer des améliorations</p></a></li>
         <li><a href="#"><p>Nous contacter</p></a></li>
         <li><a href="#"><p>FAQ</p></a></li>
-        <li><a class="github-button" href="https://github.com/BenGaudry/HautLesPains-v2" data-size="large" data-color-scheme="no-preference: light; light: light; dark: light;">Code source</a></li>
+        <li><a class="github-button" target="_blank" rel="noopener noreferrer" href="https://github.com/BenGaudry/HautLesPains-v2" data-size="large" data-color-scheme="no-preference: light; light: light; dark: light;">Code source</a></li>
       </ul>
       <ul>
         <li class="footer-section-title"><h5>Plus</h5></li>
         <li><a href="#"><p>Mentions légales</p></a></li>
-        <li><a href="#"><p>Conditions d'utilisation</p></a></li>
-        <li><a href="#"><p>CGV</p></a></li>
+        <li><a href="https://github.com/BenGaudry/HautLesPains/blob/main/res/markdown/cvg.md" target="_blank" rel="noopener noreferrer"><p>CGUV</p></a></li>
         <li><a href="<?= $__path__ ?>templates/tests/design-system.php"><p>Design System</p></a></li>
         <li><a href="<?= $__path__ ?>config/apis"><p>Apis</p></a></li>
       </ul>

@@ -129,21 +129,22 @@ Vous convenez expressément que votre utilisation du Service, ou votre incapacit
 Haut Les Pains, nos directeurs, responsables, employés, sociétés affiliées, agents, contractants, stagiaires, fournisseurs, prestataires de services et concédants ne peuvent en aucun cas être tenus responsables de toute blessure, perte, réclamation, ou de quelconques dommages directs, indirects, accessoires, punitifs, spéciaux ou consécutifs, y compris mais sans s'y limiter, de la perte de profits, revenus, économies ou données, de coûts de remplacement ou autres dommages similaires, qu’ils soient contractuels, délictuels (même en cas de négligence), de responsabilité stricte ou autre, résultant de votre utilisation du Service ou de tout service ou produit recourant à celui-ci, ou de toute autre réclamation liée de quelque manière que ce soit à votre utilisation du Service ou de tout produit, y compris mais sans s'y limiter, à des erreurs ou omissions dans un contenu, ou à de quelconques pertes ou dommages découlant de l’utilisation du Service ou d'un contenu (ou produit) publié, transmis ou rendu accessible par le biais du Service, et ce, même si vous avez été averti(e) de la possibilité qu’ils surviennent.
 Du fait que certains États ou juridictions ne permettent pas d’exclure ou de limiter la responsabilité quant aux dommages consécutifs ou accessoires, notre responsabilité dans ces États ou juridictions sera limitée dans la mesure maximale permise par la loi.
 
-ARTICLE 14 – INDEMNISATION
+### ARTICLE 14 – INDEMNISATION
 
 Vous acceptez d’indemniser, de défendre et de tenir Haut Les Pains et notre société mère, nos filiales, sociétés affiliées, partenaires, responsables, directeurs, agents, contractants, concédants, prestataires de services, sous-traitants, fournisseurs, stagiaires et employés, quittes de toute réclamation ou demande, y compris d'honoraires raisonnables d’avocat, émise par un quelconque tiers à cause de ou consécutivement à votre violation des présentes Conditions d’utilisation ou des documents auxquels elles font référence, ou à votre violation de quelconques lois ou droits d’un tiers.
-ARTICLE 15 – DISSOCIABILITÉ
+
+### ARTICLE 15 – DISSOCIABILITÉ
 
 Dans le cas où une quelconque disposition des présentes Conditions d’utilisation est jugée illégale, nulle ou inapplicable, cette disposition sera néanmoins applicable dans la pleine mesure permise par la loi, et la partie non applicable sera considérée comme étant dissociée de ces Conditions d’utilisation, sans que ce jugement n'affecte la validité et l’applicabilité des autres dispositions.
 
-ARTICLE 16 – RÉSILIATION
+### ARTICLE 16 – RÉSILIATION
 
 Les obligations et responsabilités engagées par les parties avant la date de résiliation resteront en vigueur après la résiliation de cet accord, et ce, à toutes fins.
 
 Les présentes Conditions d’utilisation resteront en vigueur, à moins et jusqu’à ce qu’elles soient résiliées par vous ou par nous. Vous pouvez résilier ces Conditions d’utilisation à tout moment en nous avisant que vous ne souhaitez plus utiliser nos Services, ou lorsque vous cessez d’utiliser notre site.
 Si nous jugeons ou suspectons, à notre seule discrétion, que vous ne respectez pas ou que vous n'avez pas respecté une quelconque modalité ou disposition des présentes Conditions d’utilisation, nous pouvons également résilier cet accord à tout moment et sans préavis. Vous demeurerez alors responsable de toutes les sommes redevables jusqu’à la date de résiliation (incluse), en conséquence de quoi nous pouvons vous refuser l’accès à nos Services (ou à une partie de ceux-ci).
 
-ARTICLE 17 – INTÉGRALITÉ DE L’ACCORD
+### ARTICLE 17 – INTÉGRALITÉ DE L’ACCORD
 
 Tout manquement de notre part à l’exercice ou à l’application d'un droit ou d'une disposition des présentes Conditions d’utilisation ne constitue pas une renonciation à ce droit ou à cette disposition.
 
@@ -151,18 +152,18 @@ Les présentes Conditions d’utilisation ou toute autre politique ou règle d�
 Toute ambiguïté quant à l’interprétation de ces Conditions d’utilisation ne doit pas être interprétée en défaveur de la partie rédactrice.
 
 
-ARTICLE 18 – LOI APPLICABLE
+### ARTICLE 18 – LOI APPLICABLE
 
 Les présentes Conditions d’utilisation, ainsi que tout accord distinct par lequel nous vous fournissons les Services sont régis et interprétés en vertu des lois de Le fournil, Longessaigne, 69770, France.
 
 
-ARTICLE 19 – MODIFICATIONS APPORTÉES AUX CONDITIONS D’UTILISATION
+### ARTICLE 19 – MODIFICATIONS APPORTÉES AUX CONDITIONS D’UTILISATION
 
 Vous pouvez consulter la version la plus récente des Conditions d’utilisation à tout moment sur cette page.
 
 Nous nous réservons le droit, à notre seule discrétion, de mettre à jour, modifier ou remplacer toute partie des présentes Conditions d'utilisation en publiant lesdites mises à jour et/ou modifications sur notre site web. Il vous incombe de vérifier notre site web de temps à autre pour voir si des changements y ont été apportés. En continuant à accéder à notre site web et au Service ou à les utiliser après la publication de modifications apportées aux présentes Conditions d'utilisation, vous acceptez celles-ci.
 
 
-ARTICLE 20 – COORDONNÉES
+### ARTICLE 20 – COORDONNÉES
 
 Les questions relatives aux Conditions d’utilisation doivent nous être envoyées à web.hautlespains@outlook.fr.
