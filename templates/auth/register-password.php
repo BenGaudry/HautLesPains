@@ -5,29 +5,38 @@ require_once('../../config/databaseConnect.php');
 // Checkings :
 
 if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['tel'])) {
+  // Tous les champs sont remplis
+  
+  // On fait une pause de 1 seconde pour éviter les spams
   sleep(1);
+
+  // Def des variables
   $name = htmlspecialchars($_POST['prenom']);
 	$lastName = htmlspecialchars($_POST['nom']);
 	$email = htmlspecialchars($_POST['email']);
   $dialCode = htmlspecialchars($_POST['dial-code']);
 	$phone = htmlspecialchars($_POST['tel']);
 
-  $check = $bdd->prepare('SELECT prenom, email, pass FROM users WHERE email = :email');
+  // On va chercher dans la db si un compte correspond à l'email renseigné
+  $check = $bdd->prepare('SELECT email FROM users WHERE email = :email');
   $check->execute(array('email' => $email));
   $data = $check->fetch();
   $row = $check->rowCount();
 
-  if($row == 0){
+  if($row === 0){
+    // L'email n'existe pas dans la base
+    // On vérifie que les champs ne dépassent pas la limitation de caratères de la base :
     if(strlen($email) < 255){
       if(strlen($name) < 100){
         if(strlen($lastName) < 100){
+          // On vérifie si l'email est au bon format
           if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-
+            // Toites les vérifications ont été passées !
           } else header('Location:register.php?n=FERR4');
         } else header('Location:register.php?n=FERR3');
       } else header('Location:register.php?n=FERR3');
     } else header('Location:register.php?n=FERR3');
-  } else header('Location:register.php?n=FERR2');
+  } else header('Location:login.php?n=FERR2');
 } else header('Location:register.php?n=FERR1');
 
 ?>
@@ -57,11 +66,5 @@ if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && 
     require_once('../../res/components/progress-bar.php');
   ?>
 </form>
-
-<!-- <script>
-  window.onload = () => {
-    addCountryCodes('country-code');
-  }
-</script> -->
 
 <?php require_once '../../res/components/footer.php'; ?>
