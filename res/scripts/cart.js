@@ -208,7 +208,6 @@ function addItemsToCarousel(items) {
 
   for (i = 1; i <= arraySize; i++) {
     let path = "http://localhost/HautLesPains2/" + items[i].path
-    console.log(path)
     miaslider.newSlide(
       items[i].name,
       "",

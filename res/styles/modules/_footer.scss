@@ -10,12 +10,9 @@
     justify-content: center;
     flex-direction: row;
     margin-bottom: 30px;
+    gap: 70px;
 
     ul {
-      &:not(:last-child) {
-        margin-right: 70px;
-      }
-
       li {
         a {
           p{
@@ -30,22 +27,74 @@
       }
 
       .footer-section-title {
-        color: #000;
+        color: $primaryTextColor;
         font-size: 1em;
       }
     }
 
-    .call-to-action {
-      input {
-        background-color: $bodyBgColor;
-        border: 2px solid darken($bodyBgColor, 5%);
-        padding: 10px 20px;
-      }
-    }
+    
   }
 }
 
+.github-button{
+  font-size: 1.5em !important;
+}
+
+.call-to-action {
+  width: min(350px, 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  input {
+    background-color: $bodyBgColor;
+    border: 2px solid darken($bodyBgColor, 5%);
+    padding: 10px 20px;
+    width: max-content;
+    margin: 0;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 70px;
+}
+
 .copyright {
-  color: #6c6c6c;
+  color: $secondaryTextColor;
   text-align: center;
+  font-size: 1em;
+
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+@media screen and(max-width: 850px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media screen and(max-width: 460px) {
+  .footer-links {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .call-to-action{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column !important;
+    
+    .auth-submit {
+
+    }
+  }
 }
