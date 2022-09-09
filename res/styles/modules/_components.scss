@@ -61,7 +61,7 @@
 	border-radius: 100px;
 	transition: background-color, transform, 0.3s;
 	border: 2px solid $accent;
-	width: fit-content;
+	width: fit-content !important;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -98,12 +98,17 @@
 	}
 
 	&:hover {
+		cursor: pointer;
 		background-color: darken($accent, 10%);
 		border-color: darken($accent, 10%);
 	}
 
 	&:active {
 		transform: scale(95%);
+	}
+
+	&:disabled {
+		opacity: 0.5;
 	}
 }
 
@@ -175,6 +180,11 @@
 	&:active {
 		background-color: #99ffaa !important;
 	}
+}
+
+.btn-danger {
+	border-color: transparent !important;
+	background-color: $red !important;
 }
 
 .btn-container {
@@ -432,4 +442,39 @@
 	text-align: center;
 	width: fit-content;
 	margin: 0 auto;
+}
+
+#del-acc-confirm-window{
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	padding: calc($defaultPadding * 2);
+	top: 0;
+	z-index: 1115;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(#000, .5);
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		width: max-content;
+		height: max-content;
+		border-radius: 15px;
+		padding: $defaultPadding;
+
+		.form-group {
+			margin-top: 15px;
+		}
+
+		input {
+			width: 350px;
+		}
+	}
+}
+
+.active-confirm-window {
+	display: flex !important;
 }
