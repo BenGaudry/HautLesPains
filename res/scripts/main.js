@@ -110,10 +110,10 @@ confirmEmailInput.addEventListener("input", (e) => {
 
   if (e.inputType !== "insertText") {
     // L'utilisateur n'a pas tapé son email
-    alert("Le collage ou les suggestions d'email ne sont pas autorisés !");
     e.preventDefault();
     confirmEmailInput.value = "";
     confirmDeleteBtn.disabled = true
+    alert("Le collage ou les suggestions d'email ne sont pas autorisés !");
 
   } else {
 
