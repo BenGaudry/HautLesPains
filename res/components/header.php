@@ -60,26 +60,29 @@ HTML;
 <?php require_once('notification.php') ?>
 
 <header class="menu-bar">
-    <nav>
-      <div class="menu-bar-assets">
-        <img src="<?= $__path__ ?>res/img/favicon/favicon.png" alt="Icone du site">
-        <h3>Haut les pains</h3>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <div id="hamburger">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    
 
-      <ul id="links">
-				<?= nav_item('templates/index.php', 'Accueil') ?>
-				<li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
-        <?= nav_item('templates/order.php', 'Commander') ?>
-				<?= nav_item('templates/profile.php?tab=informations', 'Profil', 'btn') ?>
-      </ul>
+        <div class="menu-bar-assets">
+          <img src="<?= $__path__ ?>res/img/favicon/favicon.png" alt="Icone du site">
+          <h3>Haut les pains</h3>
+        </div>
 
-      <button type="button" onclick="toggleMenu()" id="menu-btn" class="menu-btn">
-        <div></div>
-        <div></div>
-      </button>
-    </nav>
-  </header>
+        <ul id="links">
+				  <?= nav_item('templates/index.php', 'Accueil') ?>
+				  <li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
+          <?= nav_item('templates/order.php', 'Commander') ?>
+				  <?= nav_item('templates/profile.php?tab=informations', 'Profil', 'btn') ?>
+        </ul>
+    </div>
+  </nav>
+</header>
 
   <div id="scrollUp">
     <a href="#"><img src="<?= $__path__ ?>res/img/icons/arrow-top-page.png" alt=""></a>
