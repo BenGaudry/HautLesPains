@@ -58,7 +58,7 @@
 .btn {
 	color: $bodyBgColor;
 	background-color: $accent;
-	border-radius: 100px;
+	border-radius: 15px;
 	transition: background-color, transform, 0.3s;
 	border: 2px solid $accent;
 	width: fit-content !important;
@@ -78,19 +78,6 @@
 		display: block;
 		line-break: none;
 		user-select: none;
-
-		// &::after{
-		// 	content: "→";
-		// 	font-size: 0em;
-		// 	margin-left: 0;
-		// 	height: 0;
-		// 	transition: all 0.3s;
-		// }
-
-		// &:hover::after{
-		// 	font-size: 1em;
-		// 	margin-left: 5px;
-		// }
 	}
 
 	&::after {
