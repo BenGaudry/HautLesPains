@@ -14,7 +14,7 @@
       <ul>
         <li class="footer-section-title"><h5>Plus</h5></li>
         <li><a href="#"><p>Mentions légales</p></a></li>
-        <li><a href="https://github.com/BenGaudry/HautLesPains/blob/main/res/markdown/cvg.md" target="_blank" rel="noopener noreferrer"><p>CGUV</p></a></li>
+        <li><a href="https://github.com/BenGaudry/HautLesPains/blob/main/res/markdown/cgv.md" target="_blank" rel="noopener noreferrer"><p>CGUV</p></a></li>
         <li><a href="<?= $__path__ ?>templates/tests/design-system.php"><p>Design System</p></a></li>
         <li><a href="<?= $__path__ ?>config/apis"><p>Apis</p></a></li>
       </ul>
