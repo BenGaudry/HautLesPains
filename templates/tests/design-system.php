@@ -1,4 +1,13 @@
-<?php require_once '../../res/components/header.php'; ?>
+<?php
+
+// if($_SESSION['id'] !== 1) {
+//   header("Location: $__path__ accueil");
+// }
+
+
+require_once '../../res/components/header.php';
+
+?>
 
 <section class="hero hero-splitted">
   <div class="content">

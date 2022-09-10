@@ -1,19 +1,21 @@
 /* colors */
-$accent : #bdaf8d;
+:root {
+  --accent : #bdaf8d;
 
-$bodyBgColor: #fff;
-$boxBgColor: #f3f3f3;
+  --body-bg-color: #fff;
+  --box-bg-color: #f3f3f3;
 
-$primaryTextColor: #000;
-$secondaryTextColor: #9b9b9b;
+  --primary-text-color: #000;
+  --secondary-text-color: #9b9b9b;
 
-$borderColor: #ccc;
+  --border-color: #ccc;
 
-$green: #41cf7c;
-$red: #f25353;
+  --green-normal: #41cf7c;
+  --red-normal: #f25353;
 
 
-/* sizes */
-$maxElementsWidth: 1200px;
-$defaultPadding: 25px;
-$topBarHeight: 80px;
+  /* sizes */
+  $maxElementsWidth: 1200px;
+  $defaultPadding: 25px;
+  $topBarHeight: 80px;
+}

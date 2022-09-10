@@ -29,20 +29,20 @@
           span{
             font-weight: 400;
             font-size: 1.2em;
-            color: $secondaryTextColor;
+            color: var(--secondary-text-color);
           }
 
           i{
-            color: $secondaryTextColor;
+            color: var(--secondary-text-color);
           }
         }
       }
 
       .active-profile-tab{
-        border-bottom-color: $accent !important;
+        border-bottom-color: var(--accent) !important;
 
         span, i {
-          color: $accent;
+          color: var(--accent);
           font-weight: 600;
         }
       }
@@ -55,7 +55,7 @@
   margin: 0 auto;
   margin-bottom: $defaultPadding;
   padding: $defaultPadding;
-  border: 1px solid $borderColor;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -77,8 +77,8 @@
     position: relative;
     width: fit-content;
     float: right;
-    background-color: $accent;
-    color: $bodyBgColor;
+    background-color: var(--accent);
+    color: var(--body-bg-color);
     padding: 10px 20px;
     border: 0;
     border-radius: 50px;
@@ -106,7 +106,7 @@
   flex-direction: column;
 
   label{
-    color: $secondaryTextColor;
+    color: var(--secondary-text-color);
   }
 
   input {
@@ -129,14 +129,14 @@
 }
 
 .bill{
-  border-bottom: 1px solid $borderColor;
+  border-bottom: 1px solid var(--border-color);
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   &:first-child {
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid var(--border-color);
   }
 
   .bill-title, .bill-price{

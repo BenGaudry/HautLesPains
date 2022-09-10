@@ -53,7 +53,7 @@ function sendEmail(
   }
 
   if(isset($options['redirect'])) {
-    $redirect = $options['redirect'];
+    var(--red-normal)irect = $options['redirect'];
   }
 
   $mail = [
@@ -65,12 +65,12 @@ function sendEmail(
 
   if(mail($mail['to'], $mail['title'], $mail['content'], $mail['headers'])) {
     if(isset($options['redirect'])) {
-      header('Location: '.$redirect['success']);
+      header('Location: '.var(--red-normal)irect['success']);
     }
     $return = true;
   } else {
     if(isset($options['redirect'])) {
-      header('Location: '.$redirect['fail']);
+      header('Location: '.var(--red-normal)irect['fail']);
     }
     $return = false;
   }

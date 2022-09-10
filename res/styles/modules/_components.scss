@@ -11,14 +11,14 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: $secondaryTextColor;
+	background: var(--secondary-text-color);
 	width: 8px !important;
 	border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:active {
-	background: $primaryTextColor
+	background: var(--primary-text-color)
 }
 
 #scrollUp {
@@ -29,8 +29,8 @@
 	width: 50px;
 	border-radius: 35px;
 	opacity: 0;
-	background-color: $primaryTextColor;
-	color: $bodyBgColor;
+	background-color: var(--primary-text-color);
+	color: var(--body-bg-color);
 	transition: opacity ease-in-out 0.2s;
 
 	a {
@@ -56,11 +56,11 @@
 }
 
 .btn {
-	color: $bodyBgColor;
-	background-color: $accent;
+	color: var(--body-bg-color);
+	background-color: var(--accent);
 	border-radius: 15px;
 	transition: background-color, transform, 0.3s;
-	border: 2px solid $accent;
+	border: 2px solid var(--accent);
 	width: fit-content !important;
 	display: flex;
 	align-items: center;
@@ -69,7 +69,7 @@
 
 	a {
 		transition: none;
-		color: $bodyBgColor  !important;
+		color: var(--body-bg-color)  !important;
 		font-size: 1.1em;
 		font-weight: 500 !important;
 		padding: 10px 30px;
@@ -86,8 +86,8 @@
 
 	&:hover {
 		cursor: pointer;
-		background-color: darken($accent, 10%);
-		border-color: darken($accent, 10%);
+		background-color: darken(var(--accent), 10%);
+		border-color: darken(var(--accent), 10%);
 	}
 
 	&:active {
@@ -100,19 +100,19 @@
 }
 
 .btn-transparent {
-	border-color: $accent;
+	border-color: var(--accent);
 	background-color: transparent !important;
 
 	a {
-		color: $accent  !important;
+		color: var(--accent)  !important;
 
 		&:hover {
-			color: $bodyBgColor  !important;
+			color: var(--body-bg-color)  !important;
 		}
 	}
 
 	&:hover {
-		background-color: darken($accent, 10%) !important;
+		background-color: darken(var(--accent), 10%) !important;
 	}
 }
 
@@ -122,7 +122,7 @@
 	position: relative;
 
 	a {
-		color: $secondaryTextColor  !important;
+		color: var(--secondary-text-color)  !important;
 		padding: 0;
 		transition: color 0.2s;
 
@@ -133,7 +133,7 @@
 		}
 
 		&:hover {
-			color: $primaryTextColor  !important;
+			color: var(--primary-text-color)  !important;
 
 			&::after {
 				margin-left: 18px;
@@ -157,7 +157,7 @@
 	width: max-content !important;
 	margin-left: 15px;
 	transition: transform, 0.4s;
-	background-color: $accent  !important;
+	background-color: var(--accent)  !important;
 	border-radius: 50px;
 
 	img {
@@ -171,7 +171,7 @@
 
 .btn-danger {
 	border-color: transparent !important;
-	background-color: $red !important;
+	background-color: var(--red-normal) !important;
 }
 
 .btn-container {
@@ -212,7 +212,7 @@
 
 	input{
 		width: 350px;
-		border: 1px solid $borderColor;
+		border: 1px solid var(--border-color);
 		padding: calc($defaultPadding / 2) calc($defaultPadding / 2);
 	}
 
@@ -281,11 +281,11 @@
 		border-radius: 2.5px;
 		width: 50px;
 		margin-top: $defaultPadding;
-		background-color: darken($boxBgColor, 8%);
+		background-color: darken(var(--box-bg-color), 8%);
 	}
 
 	.active-section{
-		background-color: $accent;
+		background-color: var(--accent);
 	}
 }
 
@@ -315,11 +315,11 @@
 }
 
 .notif-error{
-	background: $red !important;
+	background: var(--red-normal) !important;
 }
 
 .notif-success{
-	background-color: $green !important;
+	background-color: var(--green-normal) !important;
 }
 
 .card-container{
@@ -372,7 +372,7 @@
 
 	&:hover{
 		cursor: pointer;
-		background-color: $accent;
+		background-color: var(--accent);
 		color: #fff;
 	}
 }
@@ -389,7 +389,7 @@
 		text-decoration: underline;
 
 		&:hover{
-			color: $accent;
+			color: var(--accent);
 		}
 	}
 }
@@ -405,7 +405,7 @@
 		text-align: center;
 		border-radius: 5px;
 		margin: 4px;
-		border: 2px solid $borderColor;
+		border: 2px solid var(--border-color);
 		background-color: transparent;
 		outline: none;
 		transition: 0.2s;

@@ -4,7 +4,7 @@ require_once '../res/components/header.php';
 require_once('../config/databaseConnect.php');
 
 if(!isset($_SESSION['user'])) {
-  header('Location: auth/login.php');
+  header('Location: connexion');
 }
 
 function registered_since() {

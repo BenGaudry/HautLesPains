@@ -31,7 +31,7 @@ dd {
 	font-weight: inherit;
 	text-decoration: inherit;
 	font-family: $plainTextFont;
-	color: $primaryTextColor;
+	color: var(--primary-text-color);
 }
 
 h1,
@@ -57,7 +57,7 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	font-size: 1em;
-	background-color: $bodyBgColor;
+	background-color: var(--body-bg-color);
 	overflow-x: hidden;
 }
 

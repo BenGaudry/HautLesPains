@@ -79,6 +79,7 @@ HTML;
 				  <li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
           <?= nav_item('commander', 'Commander', 'templates/order.php') ?>
 				  <?= nav_item('profil/informations', 'Profil', 'btn', 'templates/profile.php') ?>
+          <li><a href=""><i class="fi fi-rr-shopping-cart"></i></a></li>
         </ul>
     </div>
   </nav>
