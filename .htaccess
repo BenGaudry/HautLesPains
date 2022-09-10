@@ -1,7 +1,18 @@
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !=/favicon.ico
-RewriteRule ^(.*)$ $1.php [L,QSA]
 
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
 
-ErrorDocument 404 /404.php
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# HomePage name
+RewriteRule accueil templates/index.php
+RewriteRule profil/([a-zA-Z0-9\-]+) templates/profile.php?tab=$1
+RewriteRule commander templates/order.php

@@ -11,14 +11,14 @@ function page_title() {
 	return $title;
 }
 
-function nav_item(string $lien, string $titre, string $optionalClass = NULL):string {
+function nav_item(string $lien, string $titre, string $urlToMatch):string {
 
   $class = ''; // Classe par défaut du menu
 
   $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/HautLesPains2/' . $lien;
   $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
-  if(strpos($url, $lien) !== false){
+  if(strpos($url, $urlToMatch) !== false){
     $class .= ' active';
   }
 
@@ -75,10 +75,10 @@ HTML;
         </div>
 
         <ul id="links">
-				  <?= nav_item('templates/index.php', 'Accueil') ?>
+				  <?= nav_item('accueil', 'Accueil', 'templates/index.php') ?>
 				  <li><a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">Le fournil</a></li>
-          <?= nav_item('templates/order.php', 'Commander') ?>
-				  <?= nav_item('templates/profile.php?tab=informations', 'Profil', 'btn') ?>
+          <?= nav_item('commander', 'Commander', 'templates/order.php') ?>
+				  <?= nav_item('profil/informations', 'Profil', 'btn', 'templates/profile.php') ?>
         </ul>
     </div>
   </nav>

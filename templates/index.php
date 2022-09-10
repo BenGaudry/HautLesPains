@@ -12,7 +12,7 @@
 
         <div class="btn-container">
           <div class="btn fadein">
-            <a href="<?= $__path__ ?>templates/order.php">Commander</a>
+            <a href="<?= $__path__ ?>commander">Commander</a>
           </div>
           <div class="btn btn-transparent fadein">
             <a href="https://le-fournil.jimdosite.com/notre-travail/" target="_blank">Découvrir</a>
@@ -32,7 +32,7 @@
 
       <div class="side less-important-side">
         <h1>Points de vente</h1>
-        <p>Je travaille au <a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer">fournil de Longessaigne</a><br>
+        <p>Je travaille au <a href="https://le-fournil.jimdosite.com/le-lieu/" target="_blank" rel="noopener noreferrer" class="underlined">fournil de Longessaigne</a><br>
         ou des ventes se tiennent, ou je propose<br>
         des livraisons à domicile, ou dans des dépôts<br>
         indiqués sur la carte.</p>

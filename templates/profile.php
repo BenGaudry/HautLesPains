@@ -25,16 +25,13 @@ function registered_since() {
 }
 
 function tabs() {
+  $tab = "user/infos.php";
   if(isset($_GET['tab'])) {
     if($_GET['tab'] === 'informations'){
       $tab = "user/infos.php";
     } else if ($_GET['tab'] === 'factures'){
       $tab = "user/bills.php";
-    } else {
-      $tab = "user/infos.php";
     }
-  } else {
-    $tab = "user/infos.php";
   }
 
   return $tab;
@@ -51,11 +48,11 @@ function tabs() {
 
   <nav>
     <ul>
-      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "informations") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>templates/profile.php?tab=informations">
+      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "informations") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>profil/informations">
         <i class="fi fi-rr-user"></i>
         <span>Informations</span>
       </a></li>
-      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "factures") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>templates/profile.php?tab=factures">
+      <li <?php if(isset($_GET['tab']) && $_GET['tab'] === "factures") { echo('class="active-profile-tab"'); } ?>><a href="<?= $__path__ ?>profil/factures">
         <i class="fi fi-rr-file-invoice"></i>
         <span>Factures</span>
       </a></li>
