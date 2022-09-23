@@ -17,4 +17,5 @@ RewriteRule accueil templates/index.php
 RewriteRule profil/([a-zA-Z0-9\-]+) templates/profile.php?tab=$1
 RewriteRule commander templates/order.php
 RewriteRule connexion templates/auth/login.php
-RewriteRule inscription templates/auth/login.php
+RewriteRule inscription templates/auth/register.php
+RewriteRule finir-inscription templates/auth/register-password.php

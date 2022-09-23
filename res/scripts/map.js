@@ -4,7 +4,7 @@ const lon = 4.4248785829709085;
 var macarte = null;
 // Fonction d'initialisation de la carte
 function initMap(imgpath) {
-	fetch("http://localhost/HautLesPains2/config/apis/api-depots.php", {
+	fetch("http://localhost/hautlespains/config/apis/api-depots.php", {
 		"method": "GET",
 	})
 	.then(response => response.json())

@@ -31,6 +31,8 @@ function tabs() {
       $tab = "user/infos.php";
     } else if ($_GET['tab'] === 'factures'){
       $tab = "user/bills.php";
+    } else if ($_GET['tab'] === 'admin'){
+      $tab = "admin/index.php";
     }
   }
 
@@ -56,6 +58,24 @@ function tabs() {
         <i class="fi fi-rr-file-invoice"></i>
         <span>Factures</span>
       </a></li>
+
+      <!-- Affiche l'onglet admin ssi l'utilisateur est admin -->
+      <?php if($_SESSION['id'] === 1) {
+
+        $class = "";
+        if(isset($_GET['tab']) && $_GET['tab'] === "admin") { 
+          $class = "active-profile-tab";
+        }
+
+        echo('
+        <li class="'.$class.'"><a href="'.$__path__.'profil/admin">
+        <i class="fi fi-rr-users-alt"></i>
+          <span>Admin</span>
+        </a></li>
+        ');
+      }
+
+      ?>
     </ul>
   </nav>
 </header>

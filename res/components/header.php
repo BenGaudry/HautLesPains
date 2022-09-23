@@ -1,5 +1,5 @@
 <?php
-$__path__ = 'http://localhost/HautLesPains2/';
+$__path__ = 'http://localhost/hautlespains/';
 
 function page_title() {
 	if(isset($pageTitle)){
@@ -15,7 +15,7 @@ function nav_item(string $lien, string $titre, string $urlToMatch):string {
 
   $class = ''; // Classe par défaut du menu
 
-  $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/HautLesPains2/' . $lien;
+  $l = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/hautlespains/' . $lien;
   $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
   if(strpos($url, $urlToMatch) !== false){

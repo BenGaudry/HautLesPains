@@ -6,7 +6,7 @@ require_once('../../config/databaseConnect.php');
 
 <h1 class="page-title">S'inscrire</h1>
 
-<form action="register-password.php" method="POST" class="auth-form">
+<form action="finir-inscription" method="POST" class="auth-form">
   <label class="input-desc" for="prenom">Prénom</label>
   <input type="text" name="prenom" id="prenom" required onchange="check.str(this)">
 

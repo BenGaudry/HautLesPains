@@ -19,7 +19,6 @@
   // } else {
 
   if(isset($_POST['email']) && isset($_POST['pass'])){ // les champs sont renseignés
-    sleep(1);
     $email = htmlspecialchars($_POST['email']);
     $pass = htmlspecialchars($_POST['pass']);
 
@@ -32,6 +31,7 @@
       if(filter_var($email, FILTER_VALIDATE_EMAIL)){// format email valide
         $pass = hash('sha256', $pass);
         if($data['pass'] === $pass){
+          sleep(1);
 
           set_session_vars($data['id'], $data['prenom'], $data['nom'], $email, $data['tel'], $data['registerDate']);
 

@@ -45,7 +45,7 @@ if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['email']) && 
 
 <h1 class="page-title">S'inscrire</h1>
 
-<form action="../../config/process/register-process.php" method="POST" class="auth-form">
+<form action="<?= $__path__ ?>config/process/register-process.php" method="POST" class="auth-form">
   <input type="hidden" name="prenom" value="<?= $name ?>">
   <input type="hidden" name="nom" value="<?= $lastName ?>">
   <input type="hidden" name="email" value="<?= $email ?>">

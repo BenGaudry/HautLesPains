@@ -8,6 +8,7 @@
         'FERR6' => 'Email non existant',
         'FERR7' => 'Email ou mot de passe incorrect',
         'FERR8' => 'Tel déjà utilisé',
+        'FERR9' => 'Cet email à déjà été utilisé de trop nombreuses fois',
         'FSUC1' => 'Données modifiées avec succès',
         'FSUC2' => 'Connexion réussie',
         'CEERR1' => 'Échec de la vérification',

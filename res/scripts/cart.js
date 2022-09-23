@@ -189,7 +189,7 @@ const settings = {
       marginTop: 0, //space above first Slide, usefull when you set this slider in the first page behind header nav, this option allow you to center text manually and move the text down
     }
 
-fetch("http://localhost/HautLesPains2/config/apis/api-bread-types.php", {
+fetch("http://localhost/hautlespains/config/apis/api-bread-types.php", {
   "method": "GET",
 })
 .then(response => response.json())
@@ -207,7 +207,7 @@ function addItemsToCarousel(items) {
   console.log(items)
 
   for (i = 1; i <= arraySize; i++) {
-    let path = "http://localhost/HautLesPains2/" + items[i].path
+    let path = "http://localhost/hautlespains/" + items[i].path
     miaslider.newSlide(
       items[i].name,
       "",
@@ -227,7 +227,7 @@ window.onload = () => {
   products.addProduct()
 }
 
-fetch("http://localhost/HautLesPains2/config/apis/api-products.php", {
+fetch("http://localhost/hautlespains/config/apis/api-products.php", {
   "method": "GET",
 })
 .then(response => response.json())

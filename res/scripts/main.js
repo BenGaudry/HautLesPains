@@ -18,7 +18,7 @@ window.onscroll = function () {
 };
 
 function addCountryCodes(selectId) {
-  fetch("http://localhost/HautLesPains2/config/db/country-codes.json", {
+  fetch("http://localhost/hautlespains/config/db/country-codes.json", {
     method: "GET",
   })
     .then((response) => response.json())
